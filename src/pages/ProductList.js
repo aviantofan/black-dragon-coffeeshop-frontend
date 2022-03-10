@@ -1,6 +1,6 @@
-import React from 'react'
+// import React from 'react';
 
-export default function ProductList() {
+export default function ProductList () {
   return (
     <div className='product-list'>
       <main className='row'>
@@ -13,5 +13,5 @@ export default function ProductList() {
         </section>
       </main>
     </div>
-  )
+  );
 }

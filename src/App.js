@@ -1,9 +1,9 @@
-import ProductList from "./pages/ProductList";
+import ProductList from './pages/ProductList';
 
-function App() {
+function App () {
   return (
     <>
-      <ProductList />    
+      <ProductList />
     </>
   );
 }
