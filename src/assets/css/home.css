@@ -99,6 +99,13 @@ header.home .opacity .btn {
   box-shadow: 8px 17px 33px -5px rgba(0, 0, 0, 0.3);
 }
 
+.home-page .seven-section .promo {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 120px;
+  box-shadow: 8px 17px 33px -5px rgba(0, 0, 0, 0.3);
+}
+
 .home-page .info-content {
   border-right: 1px solid black;
 }
