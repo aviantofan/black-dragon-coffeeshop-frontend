@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 // import 'bootstrap/dist/js/bootstrap.bundle';
 import './assets/sass/custom.scss';
 // import './assets/css/style.css'
+
+import './assets/scss/custom.scss';
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
