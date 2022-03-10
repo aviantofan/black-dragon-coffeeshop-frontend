@@ -5,9 +5,9 @@ function App () {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element ={<ForgotPage/>}/>
+        <Route path='/forgot' element ={<ForgotPage/>}/>
       </Routes>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
