@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import '../assets/css/style.css'
 import logo from '../assets/images/logo.png'
 import Button from '../components/Button'
+import Input from '../components/Input'
+import google from '../assets/images/google.png'
 
 const Signup = () => {
+  const label = ['email adress', 'password', 'phone number']
   return (
     <div className='login-page'>
       <section>
@@ -15,34 +18,19 @@ const Signup = () => {
               <div className='logo'>
                 <img src={logo} alt='logo' /> 
               </div>
-              <Button className='px-5'>Sign Up</Button>  
+              <Button className='px-5'>Login</Button>  
             </div>
             <div className='text-center'>
-              <h2 className='text-secondary text-center my-5'>Login</h2>
+              <h2 className='text-secondary text-center my-5'>Signup</h2>
               <form className='d-flex flex-column align-items-center'>
-                <div className='text-start input-section'>
-                  <label className='fw-bold pb-2'>Email Adress:</label>
-                  <div>
-                    <input placeholder='Enter your email adress' />
-                  </div>
-                </div>
-                <div className='text-start input-section mt-5'>
-                  <label className='fw-bold pb-2'>Password:</label>
-                  <div>
-                    <input placeholder='Enter your password' />
-                  </div>
-                </div>
-                <div className='text-start input-section mt-5'>
-                  <label className='fw-bold pb-2'>Phone Number:</label>
-                  <div>
-                    <input placeholder='Enter your phone number' />
-                  </div>
-                </div>
+                <Input label='email adress' />
+                <Input label='password' cls='mt-5' />
+                <Input label='phone number' cls='mt-5' />
                 <div className='text-start input-section my-3'>
                   <a href='#'>Forgot Password?</a>
                 </div>
-                <button className='btn btn-primary btn-full my-3'>Login</button>
-                <button className='btn btn-secondary btn-full'>Login With Google</button>
+                <button className='btn btn-primary btn-full my-3'>Signup</button>
+                <button className='btn btn-secondary btn-full'><img src={google} className='pe-1' /> Signup With Google</button>
                 {/* <Button className='' >Login</Button>
                 <Button className=''>Login with Google</Button> */}
               </form>
