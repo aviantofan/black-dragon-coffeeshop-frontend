@@ -1,8 +1,10 @@
 // import React from 'react';
+import Layout from '../layouts/Layout';
 
 const forgotPage = () => {
   return (
     <>
+    <Layout useNavbar={false}>
       <body>
         <header className="header-forgot">
           <div className="header-content">
@@ -41,6 +43,7 @@ const forgotPage = () => {
           </div>
         </header>
       </body>
+    </Layout>
     </>
   );
 };
