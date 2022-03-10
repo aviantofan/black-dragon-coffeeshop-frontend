@@ -14,7 +14,8 @@
   text-decoration: none;
   font-size: 20px;
 }
-.product-list .category:hover {
+.product-list .category:hover,
+.product-list .category:focus {
   color: #81c68b !important;
   border-bottom: 4px solid #81c68b;
 }
@@ -45,4 +46,22 @@
   bottom: 0;
   position: absolute;
   right: 25%;
+}
+
+@media all and (max-width: 992px) {
+  .product-list .main-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .product-list aside.border-end {
+    border: none !important;
+  }
+  .product-list aside {
+    padding-right: 0 !important;
+  }
+}
+@media all and (max-width: 576px) {
+  .product-list .discount {
+    right: 0;
+  }
 }
