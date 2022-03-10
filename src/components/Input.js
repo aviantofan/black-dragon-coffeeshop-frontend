@@ -11,7 +11,7 @@ export default function Input({label, cls}) {
   <div className={`text-start input-section ${cls}`}>
     <label className='text-start fw-bold pb-3'>{resLabel(label)}:</label>
     <div>
-      <input placeholder={`Enter your ${label} adress`} />
+      <input placeholder={`Enter your ${label}`} />
     </div>
   </div>
   )
