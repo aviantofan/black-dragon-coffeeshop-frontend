@@ -10,17 +10,20 @@
     "standard"
   ],
   "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": [
-      "react"
+    "react"
   ],
   "rules": {
     "react/prop-types": 0,
-    "semi": ["error", "always"]
+    "semi": [
+      "error",
+      "always"
+    ]
   }
 }
