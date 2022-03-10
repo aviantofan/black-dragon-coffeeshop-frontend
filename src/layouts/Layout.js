@@ -5,9 +5,10 @@ import '../assets/scss/Layout.scss';
 
 export default class Layout extends Component {
   render () {
+    const { useNavbar } = this.props;
     return (
       <>
-        <BDNavbar />
+      {useNavbar ? <BDNavbar /> : ''}
           <div className="layout-container">
             {this.props.children}
           </div>
