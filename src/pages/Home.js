@@ -1,12 +1,13 @@
 import '../assets/css/home.css';
-import { FaSearch, FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle } from 'react-icons/fa';
 import teamwork from '../assets/images/team-work.png';
 import Vector from '../assets/images/Vector.png';
 import Amazon from '../assets/images/amazon.png';
+import Layout from '../layouts/Layout';
 
 const Home = () => {
   return (
-    <>
+    <Layout>
     <header className="header-homepage home">
       <div className="opacity">
         <div className='container'>
@@ -18,10 +19,10 @@ const Home = () => {
           </form>
           <div className='col-sm-6 text-center m-0'>
             <div className="input-group rounded">
-            <input type="search" className="form-control rounded-pill" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            {/* <input type="search" className="form-control rounded-pill" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <span className="input-group-text border-0" id="search-addon">
             <FaSearch/>
-            </span>
+            </span> */}
             </div>
           </div>
         </div>
@@ -192,7 +193,7 @@ const Home = () => {
         </div>
       </section>
     </main>
-    </>
+    </Layout>
   );
 };
 

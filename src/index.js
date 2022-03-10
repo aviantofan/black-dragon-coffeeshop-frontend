@@ -7,7 +7,6 @@ import { App } from './App';
 
 import './assets/scss/custom.scss';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
