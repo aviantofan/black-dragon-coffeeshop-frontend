@@ -1,5 +1,5 @@
 // import React from 'react';
-import '../assets/css/style.css';
+import '../assets/css/product-list.css';
 import Layout from '../layouts/Layout';
 import mother from '../assets/images/mother.png';
 import father from '../assets/images/father.png';
@@ -12,7 +12,7 @@ export default function ProductList () {
   return (
    <Layout>
       <div className='product-list border-top container'>
-        <div className='row'>
+        <div className='row main-content'>
           <aside className='col-12 col-lg-4 pt-5 pe-5 border-end'>
             <div className='text-center mb-5'>
               <h3 className='text-dark'>Promo Today</h3>
@@ -69,16 +69,16 @@ export default function ProductList () {
             </div>
             <div className='product-list mt-5'>
               <div className='row g-5'>
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
+                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
+                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
+                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
                 <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
               </div>
