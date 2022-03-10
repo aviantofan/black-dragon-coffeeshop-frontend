@@ -1,9 +1,9 @@
-import React from 'react'
-import '../assets/css/style.css'
-import logo from '../assets/images/logo.png'
-import Button from '../components/Button'
-import Input from '../components/Input'
-import google from '../assets/images/google.png'
+// import React from 'react';
+import '../assets/css/style.css';
+import logo from '../assets/images/logo.png';
+import Button from '../components/Button';
+import Input from '../components/Input';
+import google from '../assets/images/google.png';
 
 const Login = () => {
   return (
@@ -14,9 +14,9 @@ const Login = () => {
           <div className='col-12 col-lg-6 px-5 top-section'>
             <div className='my-5 d-flex flex-row justify-content-between'>
               <div className='logo'>
-                <img src={logo} alt='logo' /> 
+                <img src={logo} alt='logo' />
               </div>
-              <Button className='px-5'>Sign Up</Button>  
+              <Button className='px-5'>Sign Up</Button>
             </div>
             <div className='text-center'>
               <h2 className='text-secondary text-center my-5'>Login</h2>
@@ -32,24 +32,24 @@ const Login = () => {
                 <Button className=''>Login with Google</Button> */}
               </form>
             </div>
-            
+
           </div>
-          
+
         </div>
         <div className='badge w-75 mx-auto d-flex justify-content-center bg-white position-relative'>
           <div className='d-flex justify-content-between align-items-center w-100 card-bottom'>
             <div className='text-start'>
               <h2 >Get your member <br/> card now!</h2>
-              <p className='text-muted'>Let's join with our member and enjoy the deals.</p> 
+              <p className='text-muted'>Let&apos;s join with our member and enjoy the deals.</p>
             </div>
             <div className='text-end'>
-              <button className='btn btn-primary px-5 py-3'>Create Now</button>  
+              <button className='btn btn-primary px-5 py-3'>Create Now</button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

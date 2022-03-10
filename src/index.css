@@ -6,6 +6,10 @@
   color: #FBFDE7
 }
 
+.text-cream:hover {
+  color: #FBFDE7
+}
+
 .box-focus-shadow-none:focus {
   box-shadow: none
 }
