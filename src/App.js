@@ -1,10 +1,14 @@
-import Layout from './layouts/Layout';
+import ForgotPage from './pages/forgotPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App () {
+const App = () => {
   return (
-    <Layout>
-    </Layout>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element ={<ForgotPage/>}/>
+      </Routes>
+  </BrowserRouter>
   );
-}
+};
 
 export default App;
