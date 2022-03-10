@@ -1,0 +1,55 @@
+
+.login-page {
+  font-family: 'Rubik', sans-serif;
+}
+.login-page .background-section {
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo img {
+  width: 30px;
+}
+.login-page .btn-small {
+  padding: 12px 20px;
+}
+.login-page .top-section {
+  margin-bottom: 230px;
+}
+.login-page input,
+.login-page .btn-full {
+  height: 70px;
+}
+.login-page input {
+  border: 1px solid gray !important;
+  border-radius: 1.25rem;
+  padding: 10px 30px;
+  width: 100%;
+}
+.login-page .input-section,
+.btn-full {
+  width: 75%;
+}
+.login-page .badge {
+  padding: 40px 30px;
+  margin-top: -95px;
+  color: black;
+  border-radius: 15px;
+}
+.login-page .badge {
+  box-shadow: -3px -4px 26px -5px rgba(0,0,0,30%);
+  -webkit-box-shadow: -3px -4px 26px -5px rgba(0,0,0,30%);
+  -moz-box-shadow: -3px -4px 26px -5px rgba(0,0,0,30%);
+}
+.login-page .badge h2 {
+  font-weight: 500;
+}
+
+@media all and (max-width: 768px) {
+  .login-page .input-section, .btn-full {
+    width: 95%;
+  }
+  .login-page .card-bottom {
+    flex-direction: column !important;
+  }
+}
