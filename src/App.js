@@ -1,7 +1,7 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import ForgotPage from './pages/forgotPage';
+import ProfilePage from './pages/profilePage';
 import InputProduct from './pages/InputProduct';
 import InputPromo from './pages/InputPromo';
 import Login from './pages/Login';
@@ -20,6 +20,7 @@ function App () {
         <Route path='/products/:id' element ={<ProductDetails />}/>
         <Route path='/products' element ={<ProductList />}/>
         <Route path='/promos/add' element ={<InputPromo />}/>
+        <Route path='/profile' element={<ProfilePage/>}/>
       </Routes>
     </BrowserRouter>
   );
