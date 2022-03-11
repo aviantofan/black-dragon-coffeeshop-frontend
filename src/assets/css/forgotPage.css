@@ -1,10 +1,6 @@
-/* Body Page */
-body{
-  font-family: 'Poppins', sans-serif;;
-}
-
 /* Style Forgot Page */
 .header-forgot{
+  font-family: 'Poppins', sans-serif;;
   background-image: url(../img/bgForgot.png);
   background-repeat: no-repeat;
   background-size: cover;
