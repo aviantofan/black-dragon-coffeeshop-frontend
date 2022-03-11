@@ -1,12 +1,13 @@
 .layout-container {
-  padding-block: 5rem;
+  padding-top: 5rem;
 }
 
 @media (min-width: 768px) { 
-  .layout-container {
-    padding-block: 7rem;
-  }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
+@media (min-width: 992px) { 
+  .layout-container {
+    padding-top: 5.7rem;
+  }
+}
