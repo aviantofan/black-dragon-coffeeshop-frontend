@@ -53,6 +53,11 @@ export default class InputProduct extends Component {
                     </Form.Group>
                     <div>
                       <Form.Label>Input Product Size:</Form.Label>
+                      <div>
+                        <Form.Text>
+                          Click size you want to use for this product
+                        </Form.Text>
+                      </div>
                       <div className="mt-3">
                         <ToggleButtonGroup type="checkbox" className="mb-2 form-checkbox justify content-center">
                           <ToggleButton id="tbg-check-1" className='btn-product-size cup rounded-circle ms-2 text-cream' value={1}>
@@ -75,6 +80,11 @@ export default class InputProduct extends Component {
                     </div>
                     <div className="mt-4" >
                       <Form.Label>Input Delivery Methods:</Form.Label>
+                      <div>
+                        <Form.Text>
+                          Click methods you want to use for this product
+                        </Form.Text>
+                      </div>
                       <div className="mt-3">
                         <ToggleButtonGroup type="checkbox" className="mb-2 form-checkbox">
                           <ToggleButton id="tbg-check-1" className='btn-deliver-method ms-3 text-cream fw-bold' value={1}>
