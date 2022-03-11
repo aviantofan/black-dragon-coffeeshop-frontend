@@ -15,6 +15,8 @@ function App () {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/admin' element={<HomeAdmin/>}/>
         <Route path='/login' element ={<Login />}/>
         <Route path='/signup' element ={<Signup/>}/>
         <Route path='/forgot' element ={<ForgotPage/>}/>
@@ -23,8 +25,6 @@ function App () {
         <Route path='/products' element ={<ProductList />}/>
         <Route path='/promos/add' element ={<InputPromo />}/>
         <Route path='/profile' element={<ProfilePage/>}/>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/admin' element={<HomeAdmin/>}/>
       </Routes>
     </BrowserRouter>
   );
