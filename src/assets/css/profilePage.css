@@ -1,0 +1,50 @@
+/* Style Profile */
+header.profile{
+  font-family: 'Poppins', sans-serif;
+}
+.profile{
+  background-image: url(../img/bgProfile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
+.profile .profileContent{
+  background-color:rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 758px;
+  color: white;
+}
+.profile .profileContent .row.profilePage{
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.profile .profileContent .row.contact{
+  background-color: rgb(144, 150, 155);
+  border-radius: 20px;
+}
+section.profilePage img.img-rounded-circle{
+  border-radius: 100px;
+  margin-left: 0px;
+  margin-bottom: 23px;
+}
+section.profilePage h2.username{
+  color: black;
+  font-weight: 700;
+  margin-top: 22px;
+}
+section.profilePage .profileDesc{
+  color: black;
+}
+section.profileContact .editContact {
+  background: #4FBDBA;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  min-height: unset;
+  min-width: unset;
+  border: unset;
+  color: #393939;
+  bottom: 15px;
+  right: 20px;
+}
