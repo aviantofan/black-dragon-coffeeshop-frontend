@@ -2,9 +2,11 @@
 import { FaPencilAlt } from 'react-icons/fa';
 import Profile from '../assets/img/profile-picture.png';
 import Layout from '../layouts/Layout';
+import Button from '../components/BDButton';
 
 const profilePage = () => {
   return (
+    <>
     <Layout>
       <header className='profile'>
         <div className='profileContent'>
@@ -16,7 +18,7 @@ const profilePage = () => {
                   <form>
                     <div className="text-center">
                       <div className="d-inline-block profile-pic">
-                        <img src={Profile} className="img-rounded-circle mt-4" alt="profile-pic" />
+                        <img src={Profile} className="img-rounded-circle mt-4 img-fluid" alt="profile-pic" />
                       </div>
                     </div>
                     <div className="profileName text-center">
@@ -28,21 +30,21 @@ const profilePage = () => {
                     <div className='row mb-2'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <button className='btn btn-primary w-75'>Choose photo</button>
+                          <Button className='btn btn-primary w-75'>Choose photo</Button>
                         </div>
                       </div>
                     </div>
                     <div className='row mb-4'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <button className='btn btn-warning w-75'>Remove photo</button>
+                          <Button className='btn btn-secondary w-75'>Remove photo</Button>
                         </div>
                       </div>
                     </div>
                     <div className='row mb-4'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <button className='btn btn-outline-warning w-75'>Edit Password</button>
+                          <Button className='btn btn-secondary w-75'>Edit Password</Button>
                         </div>
                       </div>
                     </div>
@@ -56,21 +58,21 @@ const profilePage = () => {
                     <div className='row mb-2'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <button className='btn btn-primary w-75'>Save Change</button>
+                          <Button className='btn btn-primary w-75'>Save Change</Button>
                         </div>
                       </div>
                     </div>
                     <div className='row mb-4'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <button className='btn btn-warning w-75'>Cancel</button>
+                          <Button className='btn btn-secondary w-75'>Cancel</Button>
                         </div>
                       </div>
                     </div>
                     <div className='row mb-4'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <button className='btn btn-outline-warning w-75'>Logout</button>
+                          <Button className='btn btn-primary w-75'>Logout</Button>
                         </div>
                       </div>
                     </div>
@@ -85,7 +87,7 @@ const profilePage = () => {
                         <h2>Contact</h2>
                       </div>
                       <div className='col text-end '>
-                        <button className="editContact mt-1"><FaPencilAlt /></button>
+                        <Button className="editContact mt-1"><FaPencilAlt /></Button>
                       </div>
                     </div>
                     <section className="contact">
@@ -163,6 +165,7 @@ const profilePage = () => {
         </div>
       </header>
       </Layout>
+      </>
   );
 };
 
