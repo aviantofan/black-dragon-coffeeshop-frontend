@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import ProductList from './pages/ProductList';
 import Signup from './pages/Signup';
 import ProductDetails from './pages/ProductDetails';
+import Home from './pages/Home';
+import HomeAdmin from './pages/HomeAdmin';
 
 function App () {
   return (
@@ -21,6 +23,8 @@ function App () {
         <Route path='/products' element ={<ProductList />}/>
         <Route path='/promos/add' element ={<InputPromo />}/>
         <Route path='/profile' element={<ProfilePage/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/admin' element={<HomeAdmin/>}/>
       </Routes>
     </BrowserRouter>
   );
