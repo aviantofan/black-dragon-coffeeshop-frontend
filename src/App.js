@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import ForgotPage from './pages/forgotPage';
@@ -12,12 +11,12 @@ function App () {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/login' element ={<Login />}/>
-        <Route path='/signup' element ={<Signup/>}/>
-        <Route path='/forgot' element ={<ForgotPage/>}/>
-        <Route path='/products/add' element ={<InputProduct />}/>
-        <Route path='/products' element ={<ProductList />}/>
-        <Route path='/promos/add' element ={<InputPromo />}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot" element={<ForgotPage />} />
+        <Route path="/products/add" element={<InputProduct />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/promos/add" element={<InputPromo />} />
       </Routes>
     </BrowserRouter>
   );
