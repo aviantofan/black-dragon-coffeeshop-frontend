@@ -1,11 +1,11 @@
-import ProductDetails from "./pages/ProductDetails";
+import ProductDetails from './pages/ProductDetails';
 
-function App() {
+const App = () => {
   return (
     <>
     <ProductDetails />
     </>
   );
-}
+};
 
 export default App;
