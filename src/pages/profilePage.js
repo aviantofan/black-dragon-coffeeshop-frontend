@@ -79,16 +79,16 @@ const profilePage = () => {
               <div className="col mx-3">
                 <section className='profileContact'>
                   <div className='row contact mt-5'>
-                    <div className='row'>
+                    <div className='row mb-4 mt-3'>
                       <div className='col'>
-                        <h2 className='mt-2'>Contact</h2>
+                        <h2>Contact</h2>
                       </div>
                       <div className='col text-end '>
                         <button className="editContact mt-1"><FaPencilAlt /></button>
                       </div>
                     </div>
                     <section className="contact">
-                      <div className="row">
+                      <div className="row mb-3">
                         <div className="col">
                           <label className="mb-2">Email address: </label>
                           <input className="d-block w-100 input-underline" type="text" value="zulaikha17@gmail.com" />
@@ -100,20 +100,20 @@ const profilePage = () => {
                       </div>
                     </section>
                     <section className="address">
-                      <div className='row'>
+                      <div className='row mb-5'>
                         <div className="col-6 mb-3">
                           <label className="mb-2">Delvery address: </label>
                           <textarea className="d-block w-100 input-underline">Iskandar Street no. 67 Block A Near Bus Stop</textarea>
                         </div>
                       </div>
                     </section>
-                    <div className='row'>
+                    <div className='row mb-4'>
                       <div className='col'>
                         <h2 className='mt-2'>Details</h2>
                       </div>
                     </div>
                     <section className="details">
-                      <div className="row">
+                      <div className="row mb-3">
                         <div className="col">
                           <label className="mb-2">Display name: </label>
                           <input className="d-block w-100 input-underline" type="text" value="Zulaikha" />
@@ -123,13 +123,13 @@ const profilePage = () => {
                           <input className="d-block w-100 input-underline" type="text" value="03/04/90" />
                         </div>
                       </div>
-                      <div className='row'>
+                      <div className='row mb-3'>
                         <div className="col-6 mb-3">
                           <label className="mb-2">First name: </label>
                           <input className="d-block w-100 input-underline" type="text" value="Zulaikha" />
                         </div>
                       </div>
-                      <div className='row'>
+                      <div className='row mb-4'>
                         <div className="col-6 mb-3">
                           <label className="mb-2">Last name: </label>
                           <input className="d-block w-100 input-underline" type="text" value="Nirmala" />
