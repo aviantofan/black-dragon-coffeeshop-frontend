@@ -12,12 +12,12 @@ const Home = () => {
       <div className="opacity">
         <div className='container'>
         <div className="row">
-        <form className="col-sm-6 col-lg-6">
+        <form className="col-lg-7 col-12">
           <h1>Start Your Day <br/> with Coffee and Good Meals </h1>
           <p>We provide high quality beans, good taste, and healthy <br/> meals made by love just for you. Start your day with us <br/> for a bigger smile!</p>
             <button className="btn btn-blue" aria-label="explore">Get Started</button>
           </form>
-          <div className='col-sm-6 text-center m-0'>
+          <div className='text-center m-0'>
             <div className="input-group rounded">
             {/* <input type="search" className="form-control rounded-pill" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <span className="input-group-text border-0" id="search-addon">
@@ -33,15 +33,15 @@ const Home = () => {
     <main className='home-page'>
       <section className='container info'>
         <div className='row p-5'>
-          <div className='col-lg-4 text-center p-5 info-content'>
+          <div className='col-4 text-center p-5 info-content'>
             <div className='fw-bold'>90+</div>
             <div>Staff</div>
           </div>
-          <div className='col-lg-4 text-center p-5 info-content'>
+          <div className='col-4 text-center p-5 info-content'>
             <div className='fw-bold'>30+</div>
             <div>Store</div>
           </div>
-          <div className='col-lg-4 text-center p-5'>
+          <div className='col-4 text-center p-5'>
             <div className='fw-bold'>800+</div>
             <div>Customers</div>
           </div>
@@ -50,7 +50,7 @@ const Home = () => {
       <section className='container second-section'>
         <div className='row'>
           <div className='col-12 col-lg-7 d-flex justify-content-center'>
-          <img src={teamwork} alt="Team-Work" />
+          <img src={teamwork} alt="Team-Work" className='img-fluid' />
           </div>
           <div className='col-12 col-lg-5'>
             <h2>We Provide Good Coffee and Healthy Meals</h2>
@@ -73,7 +73,7 @@ const Home = () => {
           <div className='row'>
             <div className='border product-card col-md-4'>
               <div className='product-circle mx-auto my-5'></div>
-              ,<h4 className='py-4 text-center'>Hazelnut Latte</h4>
+              <h4 className='py-4 text-center'>Hazelnut Latte</h4>
               <div className='d-flex justify-content-center'>
                 <ul className='list-group'>
                   <li><FaCheck color='#2FAB73'/> Hazelnut Syrup</li>
@@ -89,7 +89,7 @@ const Home = () => {
             </div>
             <div className='border product-card col-md-4'>
               <div className='product-circle mx-auto my-5'></div>
-              ,<h4 className='py-4 text-center'>Pinky Promise</h4>
+              <h4 className='py-4 text-center'>Pinky Promise</h4>
               <div className='d-flex justify-content-center'>
                 <ul className='list-group'>
                   <li><FaCheck color='#2FAB73'/> 1 Shot of Coffee</li>
@@ -106,7 +106,7 @@ const Home = () => {
             </div>
             <div className='border product-card col-md-4'>
               <div className='product-circle mx-auto my-5'></div>
-              ,<h4 className='py-4 text-center'>Chicken Wings</h4>
+              <h4 className='py-4 text-center'>Chicken Wings</h4>
               <div className='d-flex justify-content-center'>
                 <ul className='list-group'>
                   <li><FaCheck color='#2FAB73'/> Wings</li>
@@ -132,7 +132,7 @@ const Home = () => {
             <h2>Visit Our Store in the <br/> Spot on the Map Below</h2>
             <p>See our store in every city on the spot and spen your good day there. See you soon!</p>
             <br/>
-            <img src={Vector} alt="Team-Work" />
+            <img src={Vector} alt="Team-Work" className='img-fluid' />
           </div>
         </div>
       </section>
@@ -185,11 +185,11 @@ const Home = () => {
       <section className='seven-section bg-light'>
         <div className='container promo'>
         <div className='row p-5'>
-          <div className='col-lg-6 text-center p-5'>
+          <div className='col-lg-6 col-12 text-center p-lg-5 text'>
             <div className='fw-bold'>Check our promo today!</div>
             <div>Lets see the deals and pick yours!</div>
           </div>
-          <div className='col-lg-4 text-center p-5'>
+          <div className='col-lg-4 col-12 text-center p-lg-5'>
           <button className='btn btn-warning'>See Promo</button>
           </div>
         </div>
