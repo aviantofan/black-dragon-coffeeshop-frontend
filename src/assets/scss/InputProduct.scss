@@ -1,0 +1,56 @@
+    .img-product {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .btn-product {
+        height: 88px;
+    }
+    
+    .form-checkbox {
+        height: 70px;
+        width: 100%;
+    }
+    
+    .btn-product-size {
+        height: 70px;
+        width: 100%;
+    }
+    
+    .btn-deliver-method {
+        height: 72px;
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .cup .gram {
+        font-family: 'Poppins', serif;
+        text-align: center;
+    }
+    
+    .cup {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    .gram {
+        font-size: 18px;
+        align-items: center;
+    }
+    
+    .form-label {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .breadcrumb {
+        margin-bottom: 100px;
+    }
+    
+    .breadcrumb-item {
+        font-size: 20px;
+    }
+    
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: ">"
+    }
