@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import ProductList from './pages/ProductList';
 import Signup from './pages/Signup';
 import ProductDetails from './pages/ProductDetails';
+import EditPromoAdmin from './pages/EditPromoAdmin';
 
 function App () {
   return (
@@ -21,6 +22,7 @@ function App () {
         <Route path='/products' element ={<ProductList />}/>
         <Route path='/promos/add' element ={<InputPromo />}/>
         <Route path='/profile' element={<ProfilePage/>}/>
+        <Route path='/editpromo' element={<EditPromoAdmin/>}/>
       </Routes>
     </BrowserRouter>
   );
