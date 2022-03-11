@@ -9,7 +9,7 @@ export default class Layout extends Component {
     return (
       <>
       {notUseNavbar ? '' : <BDNavbar />}
-          <div className="layout-container">
+          <div className={`layout-container ${notUseNavbar ? 'navbar-less' : ''}`}>
             {this.props.children}
           </div>
         <BDFooter />
