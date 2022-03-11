@@ -10,6 +10,7 @@ import Signup from './pages/Signup';
 import ProductDetails from './pages/ProductDetails';
 import Home from './pages/Home';
 import HomeAdmin from './pages/HomeAdmin';
+import EditPromoAdmin from './pages/EditPromoAdmin';
 
 function App () {
   return (
@@ -17,14 +18,19 @@ function App () {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/admin' element={<HomeAdmin/>}/>
+
         <Route path='/login' element ={<Login />}/>
         <Route path='/signup' element ={<Signup/>}/>
         <Route path='/forgot' element ={<ForgotPage/>}/>
+
         <Route path='/products/add' element ={<InputProduct />}/>
         <Route path='/products/:id' element ={<ProductDetails />}/>
         <Route path='/products' element ={<ProductList />}/>
-        <Route path='/promos/add' element ={<InputPromo />}/>
+
         <Route path='/profile' element={<ProfilePage/>}/>
+
+        <Route path='/promo/add' element ={<InputPromo />}/>
+        <Route path='/promo/edit' element={<EditPromoAdmin/>}/>
       </Routes>
     </BrowserRouter>
   );
