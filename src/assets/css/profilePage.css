@@ -48,3 +48,28 @@ section.profileContact .editContact {
   bottom: 15px;
   right: 20px;
 }
+.radio-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.radio-button input {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.radio-button .checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  border: 3px solid #9F9F9F;
+  display: inline-block;
+}
+.radio-button .text {
+  display: inline-block;
+  margin-left: 19px;
+}
+.radio-button input:checked~.checkmark {
+  border-color: #072227;
+  background-color: #4FBDBA;
+}
