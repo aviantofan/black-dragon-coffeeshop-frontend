@@ -37,8 +37,8 @@ const Home = () => {
     <main className='home-page'>
       <section className='container info'>
         <div className='row p-2 p-lg-4'>
-          <div className='col-4 d-flex justify-content-center p-5 info-content'>
-            <div className='d-flex align-items-center justify-content-center me-4 bg-secondary icon-info'>
+          <div className='col-4 d-flex justify-content-center py-5 px-1 px-lg-5 info-content'>
+            <div className='d-flex align-items-center justify-content-center me-1 me-md-4 bg-secondary icon-info'>
               <FaUserAlt />
             </div>
             <div className='text text-start'>
@@ -46,8 +46,8 @@ const Home = () => {
               <div>Staff</div>
             </div>
           </div>
-          <div className='col-4 d-flex justify-content-center p-5 info-content'>
-            <div className='d-flex align-items-center justify-content-center me-4 bg-secondary icon-info'>
+          <div className='col-4 d-flex justify-content-center py-5 px-1 px-lg-5 info-content'>
+            <div className='d-flex align-items-center justify-content-center me-1 me-md-4 bg-secondary icon-info'>
               <FaHeart />
             </div>
             <div className='text text-start'>
@@ -55,8 +55,8 @@ const Home = () => {
               <div>Store</div>
             </div>
           </div>
-          <div className='col-4 d-flex justify-content-center p-5'>
-            <div className='d-flex align-items-center justify-content-center me-4 bg-secondary icon-info'>
+          <div className='col-4 d-flex justify-content-center py-5 px-1 px-lg-5'>
+            <div className='d-flex align-items-center justify-content-center me-1 me-md-4 bg-secondary icon-info'>
               <FaMapMarkerAlt />
             </div>
             <div className='text text-start'>
