@@ -15,7 +15,7 @@ const profilePage = () => {
                   <form>
                     <div className="text-center">
                       <div className="d-inline-block profile-pic">
-                        <img src={Profile} className="img-rounded-circle mt-5" alt="profile-pic" />
+                        <img src={Profile} className="img-rounded-circle mt-4" alt="profile-pic" />
                       </div>
                     </div>
                     <div className="profileName text-center">
@@ -78,7 +78,7 @@ const profilePage = () => {
               </div>
               <div className="col mx-3">
                 <section className='profileContact'>
-                  <div className='row contact mt-5'>
+                  <div className='row contact mt-4'>
                     <div className='row mb-4 mt-3'>
                       <div className='col'>
                         <h2>Contact</h2>
@@ -137,7 +137,7 @@ const profilePage = () => {
                       </div>
                     </section>
                     <section className="profileEdit">
-                      <div className="d-flex justify-content-center mb-5">
+                      <div className="d-flex justify-content-center mb-4">
                         <div className="me-5">
                           <label className="radio-button">
                             <input type="radio" name="gender" />
