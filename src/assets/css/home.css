@@ -104,6 +104,11 @@ header.home .opacity .btn {
   border-radius: 15px;
   margin-bottom: 120px;
   box-shadow: 8px 17px 33px -5px rgba(0, 0, 0, 0.3);
+  padding: 10px !important;
+}
+
+.home-page .seven-section .text {
+  padding: 10px !important;
 }
 
 .home-page .promo {
@@ -158,41 +163,7 @@ header.home .opacity .btn {
     margin-bottom: 35px;
   }
 
-  /* nav {
-    height: 95px;
-  }
-  nav .navigation {
-    flex-wrap: wrap;
-    margin: 15px 0 !important;
-  }
-  .navbar-nav li a {
-    padding: 15px 0;
-  }
-  .main-nav {
-    width: 100%;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .button-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .navbar-nav,
-  .button-section,
-  .btn-blue,
-  .btn-outline {
-    width: 100%;
-  }
-  nav .btn-outline,
-  nav .btn-blue {
-    padding: 15px;
-  }
-  .btn-outline {
-    margin-bottom: 20px;
-  } */
+
 }
 
 @media all and (max-width: 768px) {
@@ -263,7 +234,8 @@ header.home .opacity .btn {
 }
 
 @media all and (max-width: 576px) {
-  header.home .opacity .btn {
-    width: 90%;
+  header-homepage home .container {
+    /* max-width: max-content;
+    min-width: auto; */
   }
 }
