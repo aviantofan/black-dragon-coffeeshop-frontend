@@ -45,7 +45,7 @@ function App () {
   };
 
   return (
-    <Layout>
+    <Layout notUseNavbar={true}>
       <ToggleButtonGroup type='checkbox' value={inputValue} onChange={changeHandler} >
         {
           inputValue.map((item, index) => {
