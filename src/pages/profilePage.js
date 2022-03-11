@@ -1,10 +1,11 @@
 // import React from 'react';
 import { FaPencilAlt } from 'react-icons/fa';
 import Profile from '../assets/img/profile-picture.png';
+import Layout from '../layouts/Layout';
 
 const profilePage = () => {
   return (
-    <>
+    <Layout>
       <header className='profile'>
         <div className='profileContent'>
           <div className='container'>
@@ -161,7 +162,7 @@ const profilePage = () => {
           </div>
         </div>
       </header>
-    </>
+      </Layout>
   );
 };
 
