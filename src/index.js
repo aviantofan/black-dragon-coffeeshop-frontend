@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 import '../src/assets/css/login-page.css';
 import '../src/assets/css/profilePage.css';
-import '../src/assets/css/style.css';
+// import '../src/assets/css/style.css';
 
 import './assets/scss/custom.scss';
 import './index.css';

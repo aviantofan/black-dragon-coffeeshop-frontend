@@ -1,6 +1,6 @@
 // import React from 'react';
 import Layout from '../layouts/Layout';
-import '../src/assets/css/forgotPage.css';
+import '../assets/css/forgot-page.css';
 
 const forgotPage = () => {
   return (
