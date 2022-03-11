@@ -23,34 +23,6 @@
         font-size: 20px;
     }
     
-    .cup .gram {
-        font-family: 'Poppins', serif;
-        text-align: center;
-    }
-    
-    .cup {
-        font-size: 30px;
-        font-weight: 700;
-    }
-    
-    .gram {
-        font-size: 18px;
-        align-items: center;
-    }
-    
-    .form-label {
-        font-size: 20px;
-        font-weight: 700;
-    }
-    
-    .breadcrumb {
-        margin-bottom: 100px;
-    }
-    
-    .breadcrumb-item {
-        font-size: 20px;
-    }
-    
     .breadcrumb-item+.breadcrumb-item::before {
         content: ">"
     }

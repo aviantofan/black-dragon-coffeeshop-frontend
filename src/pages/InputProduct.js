@@ -22,7 +22,7 @@ export default class InputProduct extends Component {
                       <img src={img} className="img-fluid img-product rounded-circle text-center" alt="product"/>
                     </div>
                     <div className="d-grid gap-2 mt-4">
-                      <BDButton className="btn-primary btn-product  text-cream fw-bold">Take a picture</BDButton>
+                      <BDButton className="btn-primary btn-product text-cream fw-bold">Take a picture</BDButton>
                       <BDButton className="btn-secondary btn-product text-cream fw-bold">Chose from gallery</BDButton>
                     </div>
                     <div className='mt-5'>
