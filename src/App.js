@@ -6,6 +6,7 @@ import InputPromo from './pages/InputPromo';
 import Login from './pages/Login';
 import ProductList from './pages/ProductList';
 import Signup from './pages/Signup';
+import ProductDetails from './pages/ProductDetails';
 
 function App () {
   return (
@@ -15,6 +16,7 @@ function App () {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot" element={<ForgotPage />} />
         <Route path="/products/add" element={<InputProduct />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/promos/add" element={<InputPromo />} />
       </Routes>
