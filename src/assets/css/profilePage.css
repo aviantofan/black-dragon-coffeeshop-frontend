@@ -20,7 +20,7 @@ header.profile{
   border-radius: 20px;
 }
 .profile .profileContent .row.contact{
-  background-color: rgb(144, 150, 155);
+  background-color: rgb(202, 207, 211);
   border-radius: 20px;
 }
 section.profilePage img.img-rounded-circle{
@@ -72,4 +72,19 @@ section.profileContact .editContact {
 .radio-button input:checked~.checkmark {
   border-color: #072227;
   background-color: #4FBDBA;
+}
+.input-underline {
+  border: 0;
+  border-bottom: 1px solid #000;
+  padding-bottom: 26px;
+  height: 40px;
+  background-color: transparent;
+}
+.input-underline:focus {
+  outline: none;
+}
+section.address label,
+section.contact label,
+section.details label{
+  color: #9F9F9F;
 }
