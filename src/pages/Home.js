@@ -1,9 +1,17 @@
 import '../assets/css/home.css';
-import { FaCheckCircle, FaCheck, FaUserAlt, FaHeart, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaCheckCircle, FaCheck, FaUserAlt, FaHeart, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
 import teamwork from '../assets/images/team-work.png';
 import Vector from '../assets/images/Vector.png';
-import Amazon from '../assets/images/amazon.png';
 import Layout from '../layouts/Layout';
+import partner1 from '../assets/images/partner (1).png';
+import partner2 from '../assets/images/partner (2).png';
+import partner3 from '../assets/images/partner (3).png';
+import partner4 from '../assets/images/partner (4).png';
+import partner5 from '../assets/images/partner (5).png';
+import userPhoto1 from '../assets/images/user (1).png';
+import userPhoto2 from '../assets/images/user (2).png';
+import userPhoto3 from '../assets/images/user (3).png';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
 const Home = () => {
   return (
@@ -158,57 +166,101 @@ const Home = () => {
         <div className='text-center py-5'>
             <h2>Our Partner</h2>
             <br/>
-            <img src={Amazon} alt="Amazon" />
+            <div className='row align-items-center'>
+              <div className='col'>
+                <img className='img-fluid' src={partner1} alt="Amazon" />
+              </div>
+              <div className='col'>
+                <img className='img-fluid' src={partner2} alt="Amazon" />
+              </div>
+              <div className='col'>
+                <img className='img-fluid' src={partner3} alt="Amazon" />
+              </div>
+              <div className='col'>
+                <img className='img-fluid' src={partner4} alt="Amazon" />
+              </div>
+              <div className='col'>
+                <img className='img-fluid' src={partner5} alt="Amazon" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section className='six section bg-light'>
         <div className='container'>
-        <div className='text-center py-5'>
-            <div className='head-review mx-auto'>
-              <h2>Loved by Thousands of Happy Customer</h2>
-              <p>These are the stories of our customers who have visited us with great pleasure.</p></div>
-            <div className='row'>
-            <div className='border product-card col-md-4'>
-              <div className='product-circle mx-auto my-5'></div>
-              ,<h4 className='py-4 text-center'>Viezh Robert</h4>
-              <div className='d-flex justify-content-center'>
-                <p>
-                “Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!
-                </p>
+          <div className='text-center head-review mx-auto'>
+            <h2>Loved by Thousands of Happy Customer</h2>
+            <p>These are the stories of our customers who have visited us with great pleasure.</p></div>
+          <div className='row g-1'>
+            <div className='col-12 col-lg-4 p-2'>
+              <div className='review-card p-4'>
+                <div className='d-flex align-items-center justify-content-between'>
+                  <div className='d-flex align-items-center'>
+                    <div style={{ backgroundImage: `url(${userPhoto1})` }} className='user-photo'></div>
+                    <div className='ms-3'>
+                      <h5 className='p-0 m-0'>Viezh Robert</h5>
+                      <p className='p-0 m-0'>Warsaw, Poland</p>
+                    </div>
+                  </div>
+                  <span className='text-end'>4.5 <FaStar className='text-secondary' /></span>
+                </div>
+                <p className='mt-3'>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!</p>
               </div>
             </div>
-            <div className='border product-card col-md-4'>
-              <div className='product-circle mx-auto my-5'></div>
-              ,<h4 className='py-4 text-center'>Yessica Christy</h4>
-              <div className='d-flex justify-content-center'>
-                <p>
-                “I like it because I like to travel far and still can make my day better just by drinking their Hazelnut Latte
-                </p>
+            <div className='col-12 col-lg-4 p-2'>
+              <div className='review-card p-4'>
+                <div className='d-flex align-items-center justify-content-between'>
+                  <div className='d-flex align-items-center'>
+                    <div style={{ backgroundImage: `url(${userPhoto2})` }} className='user-photo'></div>
+                    <div className='ms-3'>
+                      <h5 className='p-0 m-0'>Viezh Robert</h5>
+                      <p className='p-0 m-0'>Warsaw, Poland</p>
+                    </div>
+                  </div>
+                  <span className='text-end'>4.5 <FaStar className='text-secondary' /></span>
+                </div>
+                <p className='mt-3'>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!</p>
               </div>
             </div>
-            <div className='border product-card col-md-4'>
-              <div className='product-circle mx-auto my-5'></div>
-              ,<h4 className='py-4 text-center'>Kim Young Jou</h4>
-              <div className='d-flex justify-content-center'>
-                <p>
-                “This is very unusual for my taste, I haven’t liked coffee before but their coffee is the best! and yup, you have to order the chicken wings, the best in town!
-                </p>
+            <div className='col-12 col-lg-4 p-2'>
+              <div className='review-card p-4'>
+                <div className='d-flex align-items-center justify-content-between'>
+                  <div className='d-flex align-items-center'>
+                    <div style={{ backgroundImage: `url(${userPhoto3})` }} className='user-photo'></div>
+                    <div className='ms-3'>
+                      <h5 className='p-0 m-0'>Viezh Robert</h5>
+                      <p className='p-0 m-0'>Warsaw, Poland</p>
+                    </div>
+                  </div>
+                  <span className='text-end'>4.5 <FaStar className='text-secondary' /></span>
+                </div>
+                <p className='mt-3'>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!</p>
               </div>
             </div>
           </div>
+          <div className='d-flex flex-row justify-content-between page-info-list'>
+            <div>
+              <span className='page-info ms-2 my-5 px-4  bg-secondary'></span>
+              <span className='page-info bg-primary ms-3 px-2 dot-page'></span>
+              <span className='page-info bg-primary ms-3 px-2 dot-page'></span>
+              <span className='page-info bg-primary ms-3 px-2 dot-page'></span>
+            </div>
+            <div>
+              <button className='btn btn-page-info'><FiArrowLeft /></button>
+              <button className='btn btn-page-info ms-3'><FiArrowRight /></button>
+            </div>
           </div>
         </div>
       </section>
       <section className='seven-section bg-light'>
         <div className='container promo'>
-        <div className='row p-5'>
-          <div className='col-lg-6 col-12 text-center p-lg-5 text'>
+        <div className='row p-5 align-items-center justify-content-between'>
+          <div className='col-12 col-md-6 p-lg-5 text-promo'>
             <div className='fw-bold'>Check our promo today!</div>
             <div>Lets see the deals and pick yours!</div>
           </div>
-          <div className='col-lg-4 col-12 text-center p-lg-5'>
-          <button className='btn btn-warning'>See Promo</button>
+          <div className='col-12 col-md-4 text-end btn-see-promo p-lg-5'>
+          <button className='btn btn-secondary fw-bold py-3 px-5'>See Promo</button>
           </div>
         </div>
         </div>

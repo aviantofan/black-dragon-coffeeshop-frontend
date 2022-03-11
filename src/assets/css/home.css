@@ -162,7 +162,36 @@ header.home .opacity .btn {
 .home-page .head-review {
   width: 30%;
 }
-
+.home-page .user-photo {
+  border-radius: 40px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home-page .review-card {
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 10px;
+}
+.home-page .review-card:hover {
+  border: 2px solid rgb(117, 117, 117);
+}
+.home-page .page-info {
+  border-radius: 20px;
+}
+.home-page .page-info-list {
+  margin-top: 60px;
+}
+.home-page .btn-page-info {
+  border: 2px solid rgb(157, 157, 157);
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+.home-page .btn-page-info:hover {
+  background-color: #A5C3A9;
+}
 @media all and (max-width: 991px) {
   .home .view-all {
     display: block;
@@ -193,8 +222,18 @@ header.home .opacity .btn {
     margin-top: 15px;
   }
 
+  .home-page .btn-see-promo,
+  .home-page .text-promo {
+    text-align: center !important;
+  }
+  .home-page .btn-see-promo {
+    margin-top: 20px;
+  }
   header.home .option-form {
     margin: 20px 0;
+  }
+  .home-page .head-review {
+    width: 70%;
   }
 }
 
@@ -255,8 +294,7 @@ header.home .opacity .btn {
 }
 
 @media all and (max-width: 576px) {
-  header-homepage home .container {
-    /* max-width: max-content;
-    min-width: auto; */
+  .home-page {
+    padding: 0 15px;
   }
 }
