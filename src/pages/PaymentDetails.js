@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout';
 import '../assets/scss/paymentdetail.scss';
 import imgProduct from '../assets/images/product.jpg';
+import { FaIdCard, FaTruckMoving } from 'react-icons/fa';
+import { AiFillBank } from 'react-icons/ai';
 
 export default function PaymentDetails () {
   return (
@@ -11,7 +13,7 @@ export default function PaymentDetails () {
           <div className='container'>
             <h1 className='text-white mb-5'>Checkout your <br/> item now!</h1>
             <div className='row mb-5'>
-              <div className='col-12 col-md-6 card-left'>
+              <div className='col-12 col-lg-6 card-left'>
                 <div className='card bg-white px-5 py-4'>
                   <h2 className='text-center py-lg-5'>Order Summary</h2>
                   {[...Array(2)].map((data, index) => {
@@ -27,7 +29,7 @@ export default function PaymentDetails () {
                       <div>IDR 24.0</div>
                     </div>;
                   })}
-                  <hr/>
+                  <hr className='my-4'/>
                   <div className='d-flex justify-content-between'>
                     <span>SUBTOTAL</span>
                     <span>IDR 120.000</span>
@@ -46,7 +48,7 @@ export default function PaymentDetails () {
                   </div>
                 </div>
               </div>
-              <div className='col-12 col-md-6 card-right'>
+              <div className='col-12 col-lg-6 card-right'>
                 <div className='d-flex justify-content-between text-white mb-3 fs-3 fw-bold'>
                   <span>Address details</span>
                   <span>edit</span>
@@ -63,10 +65,21 @@ export default function PaymentDetails () {
                 </div>
                 <div className='card bg-white px-5 py-4'>
                   <form>
-                    <input type='radio' className='form-check-input' id='card' value='card' />
-                    {/* <label for='card'>Card</label> */}
+                    <div className='d-flex align-items-center'>
+                      <input type='radio' className='form-check-input' id='card' value='card' />
+                      <label className='fs-4'><span className='payment-list bg-primary px-2 py-1 mx-3'><FaIdCard/></span> Card</label>
+                    </div>
+                    <div className='d-flex align-items-center my-3'>
+                      <input type='radio' className='form-check-input' id='card' value='bank' />
+                      <label className='fs-4'><span className='payment-list bg-secondary px-2 py-1 mx-3'><AiFillBank/></span> Bank account</label>
+                    </div>
+                    <div className='d-flex align-items-center'>
+                      <input type='radio' className='form-check-input' id='card' value='cod' />
+                      <label className='fs-4'><span className='payment-list bg-third px-2 py-1 mx-3'><FaTruckMoving/></span> Cash on delivery</label>
+                    </div>
                   </form>
                 </div>
+                <button className='btn btn-secondary fw-bold w-100 py-4 mt-3'>Confirm and Pay</button>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@
   }
   .img-product {
     width: 70px;
-    height: 70px;
+    height: 85px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,5 +28,19 @@
   }
   .adress {
     width: 70%;
+  }
+  .payment-list {
+    border-radius: 10px;
+  }
+  .bg-third {
+    background-color: #e1c57f;
+  }
+  @media all and (max-width: 992px) {
+    .card-right {
+      padding-left: 10px;
+    }
+    .card-left {
+      padding-right: 10px;
+    }
   }
 }
