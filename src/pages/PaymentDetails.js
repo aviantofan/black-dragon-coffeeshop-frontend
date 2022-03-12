@@ -29,7 +29,7 @@ export default function PaymentDetails () {
                       <div>IDR 24.0</div>
                     </div>;
                   })}
-                  <hr className='my-4'/>
+                  <hr className='my-5'/>
                   <div className='d-flex justify-content-between'>
                     <span>SUBTOTAL</span>
                     <span>IDR 120.000</span>
@@ -49,7 +49,7 @@ export default function PaymentDetails () {
                 </div>
               </div>
               <div className='col-12 col-lg-6 card-right'>
-                <div className='d-flex justify-content-between text-white mb-3 fs-3 fw-bold'>
+                <div className='d-flex justify-content-between text-white mt-5 mt-lg-0 mb-3 fs-3 fw-bold'>
                   <span>Address details</span>
                   <span>edit</span>
                 </div>
@@ -79,7 +79,7 @@ export default function PaymentDetails () {
                     </div>
                   </form>
                 </div>
-                <button className='btn btn-secondary fw-bold w-100 py-4 mt-3'>Confirm and Pay</button>
+                <button className='btn btn-secondary fw-bold w-100 py-4 mt-5'>Confirm and Pay</button>
               </div>
             </div>
           </div>
