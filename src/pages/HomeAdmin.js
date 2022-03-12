@@ -14,7 +14,7 @@ import userPhoto3 from '../assets/images/user (3).png';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const HomeAdmin = () => {
   const navigate = useNavigate();
   return (
     <Layout>
@@ -272,4 +272,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeAdmin;
