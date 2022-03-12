@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails';
 import Home from './pages/Home';
 import HomeAdmin from './pages/HomeAdmin';
 import EditPromoAdmin from './pages/EditPromoAdmin';
+import EditSaveProduct from './pages/EditSaveProduct';
 
 function App () {
   return (
@@ -26,6 +27,7 @@ function App () {
         <Route path='/products/add' element ={<InputProduct />}/>
         <Route path='/products/:id' element ={<ProductDetails />}/>
         <Route path='/products' element ={<ProductList />}/>
+        <Route path='/products/edit' element ={<EditSaveProduct />} />
 
         <Route path='/profile' element={<ProfilePage/>}/>
 
