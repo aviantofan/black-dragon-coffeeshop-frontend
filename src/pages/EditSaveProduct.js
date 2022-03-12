@@ -21,7 +21,12 @@ export default function EditSaveProduct () {
           <div className='col-12 col-lg-5 left-section position-relative left-dekstop' style={{ backgroundImage: `url(${imgProduct})` }}>
             <button className='btn bg-white btn-delete position-absolute d-flex align-items-center justify-content-center'><FaRegTrashAlt className='fw-bold' /></button>
           </div>
-
+          <div className='left-mobile'>
+            <div>
+              <img className='product-image' src={imgProduct} alt='product'/>
+            </div>
+            <button className='btn-primary btn my-4 py-3'>Delete</button>
+          </div>
           <div className='col-12 col-lg-6'>
             <h1>COLD BREW</h1>
             <hr />
