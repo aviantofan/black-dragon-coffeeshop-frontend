@@ -1,0 +1,17 @@
+.layout-container {
+  padding-top: 5rem;
+}
+
+.layout-container.navbar-less {
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .layout-container {
+    padding-top: 5.7rem;
+  }
+}

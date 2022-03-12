@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
+import ForgotPage from './pages/forgotPage';
+import ProfilePage from './pages/profilePage';
+import InputProduct from './pages/InputProduct';
+import InputPromo from './pages/InputPromo';
+import Login from './pages/Login';
+import ProductList from './pages/ProductList';
+import Signup from './pages/Signup';
+import ProductDetails from './pages/ProductDetails';
+import Home from './pages/Home';
+import HomeAdmin from './pages/HomeAdmin';
+import EditPromoAdmin from './pages/EditPromoAdmin';
+import PaymentDetails from './pages/PaymentDetails';
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/admin' element={<HomeAdmin/>}/>
+
+        <Route path='/login' element ={<Login />}/>
+        <Route path='/signup' element ={<Signup/>}/>
+        <Route path='/forgot' element ={<ForgotPage/>}/>
+
+        <Route path='/products/add' element ={<InputProduct />}/>
+        <Route path='/products/:id' element ={<ProductDetails />}/>
+        <Route path='/products' element ={<ProductList />}/>
+
+        <Route path='/profile' element={<ProfilePage/>}/>
+
+        <Route path='/promo/add' element ={<InputPromo />}/>
+        <Route path='/promo/edit' element={<EditPromoAdmin/>}/>
+
+        <Route path='/payment' element={<PaymentDetails />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
