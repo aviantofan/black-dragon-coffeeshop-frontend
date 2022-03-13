@@ -106,7 +106,7 @@ const Home = () => {
                 </div>
                 <div className='text-center order'>
                   <div className='price py-4'>IDR. 25.000</div>
-                  <button className='btn btn-outline-warning mb-5'>Order Now</button>
+                  <button className='btn btn-secondary mb-5'>Order Now</button>
                 </div>
               </div>
             </div>
@@ -124,8 +124,8 @@ const Home = () => {
                   </ul>
                 </div>
                 <div className='text-center order'>
-                  <div className='price py-4'>IDR. 25.000</div>
-                  <button className='btn btn-outline-warning mb-5'>Order Now</button>
+                  <div className='price py-4'>IDR. 30.000</div>
+                  <button className='btn btn-secondary mb-5'>Order Now</button>
                 </div>
               </div>
             </div>
@@ -144,8 +144,8 @@ const Home = () => {
                   </ul>
                 </div>
                 <div className='text-center order'>
-                  <div className='price py-4'>IDR. 25.000</div>
-                  <button className='btn btn-outline-warning mb-5'>Order Now</button>
+                  <div className='price py-4'>IDR. 40.000</div>
+                  <button className='btn btn-secondary mb-5'>Order Now</button>
                 </div>
               </div>
             </div>
