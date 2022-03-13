@@ -61,8 +61,8 @@ export default function ProductList () {
             <div className='list-category'>
               <ul className='list-group d-flex flex-row justify-content-between'>
                 <li><a href='#' className='category text-primary'>Favorite & Promo</a></li>
-                <li><a href='#' className='category text-primary'>Coffe</a></li>
-                <li><a href='#' className='category text-primary'>Non Coffe</a></li>
+                <li><a href='#' className='category text-primary'>Coffee</a></li>
+                <li><a href='#' className='category text-primary'>Non Coffee</a></li>
                 <li><a href='#' className='category text-primary'>Foods</a></li>
                 <li><a href='#' className='category text-primary'>Add-on</a></li>
               </ul>
