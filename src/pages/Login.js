@@ -4,9 +4,29 @@ import logo from '../assets/images/logo.png';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import google from '../assets/images/google.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { login } from '../redux/actions/auth';
+import { Navigate } from 'react-router-dom';
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const { auth } = useSelector(state => state);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    dispatch(login(email, password));
+  };
+
   return (
+    <>
+    {auth.token !== null && <Navigate to='/' />}
     <div className='login-page'>
       <section>
         <div className='row'>
@@ -20,16 +40,15 @@ const Login = () => {
             </div>
             <div className='text-center'>
               <h2 className='text-secondary text-center my-5'>Login</h2>
-              <form className='d-flex flex-column align-items-center'>
-                <Input label='email adress' />
-                <Input label='password' cls='mt-5' />
+              <form onSubmit={handleSubmit} className='d-flex flex-column align-items-center'>
+              {auth.isError && auth.errorMessage && <div style={{ backgroundColor: 'teal' }} className='alert' role='alert'>{auth.errorMessage}</div>}
+                <Input label='email adress' idInput='email' type='email' />
+                <Input label='password' cls='mt-5' idInput='password' type='password' />
                 <div className='text-start input-section my-3'>
                   <a href='#'>Forgot Password?</a>
                 </div>
-                <button className='btn btn-primary btn-full my-3'>Login</button>
+                <button type='submit' className='btn btn-primary btn-full my-3'>Login</button>
                 <button className='btn btn-secondary btn-full'><img src={google} alt='google' className='pe-1' /> Login With Google</button>
-                {/* <Button className='' >Login</Button>
-                <Button className=''>Login with Google</Button> */}
               </form>
             </div>
 
@@ -49,6 +68,7 @@ const Login = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

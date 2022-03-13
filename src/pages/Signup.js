@@ -1,13 +1,72 @@
-// import React from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import '../assets/css/style.css';
 import logo from '../assets/images/logo.png';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import google from '../assets/images/google.png';
+// import { signup as register } from '../redux/actions/auth';
+import http from '../helpers/http';
+// import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
-  // const label = ['email adress', 'password', 'phone number'];
+  const [loading, setLoading] = useState(false);
+  const [isVerify, setIsVeriry] = useState(false);
+  const [emailVerify, setEmailVerify] = useState('');
+  const [passwordInput, setPasswordInput] = useState('');
+
+  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const { signup } = useSelector(state => state);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleSignup = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const phone = document.getElementById('phone').value;
+    const param = new URLSearchParams();
+    param.append('email', email);
+    param.append('password', password);
+    param.append('phone', phone);
+    http().post('/auth/signup', param).then(res => {
+      if (res.status < 400) {
+        setLoading(false);
+        alert('success regist');
+        setEmailVerify(email);
+        setPasswordInput(password);
+        setIsVeriry(true);
+      }
+    }).catch(err => {
+      setLoading(false);
+      alert(err.response.data.message);
+      setIsVeriry(false);
+    });
+  };
+
+  const handleVerify = (e) => {
+    e.preventDefault();
+    const code = document.getElementById('code').value;
+    const param = new URLSearchParams();
+    param.append('email', emailVerify);
+    param.append('code', code);
+    param.append('password', passwordInput);
+    param.append('confirmPassword', passwordInput);
+    http().post('/auth/verify-reset', param).then(res => {
+      if (res.status < 400) {
+        navigate('/login');
+      }
+    }).catch(err => {
+      alert(err.response.data.message);
+    });
+  };
+
   return (
     <div className='login-page'>
       <section>
@@ -21,18 +80,26 @@ const Signup = () => {
               <Button className='px-5'>Login</Button>
             </div>
             <div className='text-center'>
-              <h2 className='text-secondary text-center my-5'>Signup</h2>
+              <h2 className='text-secondary text-center my-5'>{isVerify ? 'Verify' : 'Signup'}</h2>
               <form className='d-flex flex-column align-items-center'>
-                <Input label='email adress' />
-                <Input label='password' cls='mt-5' />
-                <Input label='phone number' cls='mt-5' />
+                {!isVerify
+                  ? <><Input label='email adress' idInput='email' type='email' />
+                <Input label='password' idInput='password' type='password' cls='mt-5' />
+                <Input label='phone number' idInput='phone' type='number' cls='mt-5' />
                 <div className='text-start input-section my-3'>
                   <a href='#'>Forgot Password?</a>
                 </div>
-                <button className='btn btn-primary btn-full my-3'>Signup</button>
+                {loading
+                  ? <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+                  : <>
+                <button onClick={handleSignup} type='submit' className='btn btn-primary btn-full my-3'>Signup</button>
                 <button className='btn btn-secondary btn-full'><img src={google} className='pe-1' /> Signup With Google</button>
-                {/* <Button className='' >Login</Button>
-                <Button className=''>Login with Google</Button> */}
+                </>}
+                </>
+                  : <><Input label='code' idInput='code' type='number' />
+                  <button onClick={handleVerify} className='btn btn-secondary btn-full my-5'>Verify</button></>}
               </form>
             </div>
 
