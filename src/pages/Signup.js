@@ -10,6 +10,7 @@ import google from '../assets/images/google.png';
 import http from '../helpers/http';
 // import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../layouts/Layout';
 
 const Signup = () => {
   const [loading, setLoading] = useState(false);
@@ -68,6 +69,7 @@ const Signup = () => {
   };
 
   return (
+    <Layout notUseNavbar={true} >
     <div className='login-page'>
       <section>
         <div className='row'>
@@ -115,8 +117,10 @@ const Signup = () => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+    </div>
+    {/* </div> */}
     </Layout>
   );
 };
