@@ -3,8 +3,23 @@ import { FaPencilAlt } from 'react-icons/fa';
 import Profile from '../assets/img/profile-picture.png';
 import Layout from '../layouts/Layout';
 import Button from '../components/BDButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { logout } from '../redux/actions/auth';
 
 const profilePage = () => {
+  const dispatch = useDispatch();
+  const { auth } = useSelector(state => state);
+
+  useEffect(() => {
+    console.log('auth', auth);
+  }, []);
+
+  const logOutHandler = () => {
+    localStorage.removeItem('user');
+    dispatch(logout());
+  };
+
   return (
     <>
     <Layout>
@@ -72,7 +87,7 @@ const profilePage = () => {
                     <div className='row mb-4'>
                       <div className='col-12 justify-content-center'>
                         <div className='text-center'>
-                          <Button className='btn btn-primary w-75'>Logout</Button>
+                          <Button onClick={logOutHandler} className='btn btn-primary w-75'>Logout</Button>
                         </div>
                       </div>
                     </div>

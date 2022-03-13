@@ -18,7 +18,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 // import { getUser } from './redux/actions/auth';
 
-import { PublicRoute } from './components/CustomRoute';
+import { PublicRoute, PrivateRoute } from './components/CustomRoute';
 
 function App () {
   const { auth } = useSelector(state => state);
@@ -55,7 +55,7 @@ function App () {
         <Route path='/products' element ={<ProductList />}/>
         <Route path='/products/edit' element ={<EditSaveProduct />} />
 
-        <Route path='/profile' element={<ProfilePage/>}/>
+        <Route path='/profile' element={ <PrivateRoute restricted={true} page={<ProfilePage />} /> }/>
 
         <Route path='/promo/add' element ={<InputPromo />}/>
         <Route path='/promo/edit' element={<EditPromoAdmin/>}/>

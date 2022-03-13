@@ -30,3 +30,9 @@ export const getUser = (token, id) => {
     payload: http(token).get(`/profile/${id}`)
   });
 };
+
+export const logout = () => {
+  return ({
+    type: 'AUTH_LOGOUT'
+  });
+};

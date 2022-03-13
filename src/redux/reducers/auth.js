@@ -70,6 +70,12 @@ const auth = (state = signupState, action) => {
       state.isLoading = false;
       return { ...state };
     }
+
+    case 'AUTH_LOGOUT': {
+      state.results = {};
+      return { ...state };
+    }
+
     default: {
       return { ...state };
     }
