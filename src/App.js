@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails';
 import Home from './pages/Home';
 import HomeAdmin from './pages/HomeAdmin';
 import EditPromoAdmin from './pages/EditPromoAdmin';
+import ChatUser from './pages/ChatUser';
 
 function App () {
   return (
@@ -31,6 +32,8 @@ function App () {
 
         <Route path='/promo/add' element ={<InputPromo />}/>
         <Route path='/promo/edit' element={<EditPromoAdmin/>}/>
+
+        <Route path='/chat' element={<ChatUser/>}/>
       </Routes>
     </BrowserRouter>
   );
