@@ -4,10 +4,11 @@ import logo from '../assets/images/logo.png';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import google from '../assets/images/google.png';
+import Layout from '../layouts/Layout';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { login } from '../redux/actions/auth';
-import { Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,13 @@ const Login = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
+
+  useEffect(() => {
+    if (auth.results.token) {
+      navigate('/');
+    }
+  }, [auth]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,8 +33,7 @@ const Login = () => {
   };
 
   return (
-    <>
-    {auth.results.token !== null && <Navigate to='/' />}
+    <Layout notUseNavbar={true}>
     <div className='login-page'>
       <section>
         <div className='row'>
@@ -68,7 +74,7 @@ const Login = () => {
         </div>
       </section>
     </div>
-    </>
+    </Layout>
   );
 };
 

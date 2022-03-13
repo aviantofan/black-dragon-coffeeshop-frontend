@@ -13,9 +13,17 @@ import userPhoto2 from '../assets/images/user (2).png';
 import userPhoto3 from '../assets/images/user (3).png';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 const Home = () => {
   const navigate = useNavigate();
+  const { auth } = useSelector(state => state);
+
+  useEffect(() => {
+    console.log(auth);
+  }, []);
+
   return (
     <Layout>
     <header className="header-homepage home">

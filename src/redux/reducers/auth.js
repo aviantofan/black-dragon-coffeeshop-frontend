@@ -38,10 +38,10 @@ const auth = (state = signupState, action) => {
       const { result } = action.payload.data;
       // console.log('test', token);
       state.results = { ...result };
-      // state.token = data.result.token;
+      // state.token = result.token;
       state.isLoading = false;
       state.isError = false;
-      window.localStorage.setItem('token', state.results.token);
+      window.localStorage.setItem('user', JSON.stringify(result));
       console.log('test', state.results);
       return { ...state };
     }
