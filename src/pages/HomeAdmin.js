@@ -106,7 +106,7 @@ const HomeAdmin = () => {
                 </div>
                 <div className='text-center order'>
                   <div className='price py-4'>IDR. 25.000</div>
-                  <button className='btn btn-outline-warning mb-5'>Order Now</button>
+                  <button className='btn btn-secondary mb-5'>Order Now</button>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ const HomeAdmin = () => {
                 </div>
                 <div className='text-center order'>
                   <div className='price py-4'>IDR. 25.000</div>
-                  <button className='btn btn-outline-warning mb-5'>Order Now</button>
+                  <button className='btn btn-secondary mb-5'>Order Now</button>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@ const HomeAdmin = () => {
                 </div>
                 <div className='text-center order'>
                   <div className='price py-4'>IDR. 25.000</div>
-                  <button className='btn btn-outline-warning mb-5'>Order Now</button>
+                  <button className='btn btn-secondary mb-5'>Order Now</button>
                 </div>
               </div>
             </div>
