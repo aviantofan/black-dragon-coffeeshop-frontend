@@ -52,6 +52,9 @@ export default function BDFooter () {
                 <FaInstagram className='fs-6' />
               </div>
             </div>
+            <p className='mt-5 mt-lg-4 text-primary'>
+              ©2022BlackDragonCoffeeshop
+            </p>
           </Col>
         </Row>
       </Container>

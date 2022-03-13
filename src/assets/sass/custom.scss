@@ -1,5 +1,9 @@
-// @import "bootstrap/scss/variables";
+@import "bootstrap/scss/functions";
 
-// $primary: $red-500;
+@import "./palletes.scss";
+@import "./colors.scss";
+
+$btn-border-radius: 1.25rem !default;
+// $btn-padding-y:               1.0rem !default;
 
 @import "bootstrap/scss/bootstrap";

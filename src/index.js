@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/sass/custom.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle';
-import { App } from './App';
+// import './assets/sass/custom.scss';
+// import './assets/css/style.css'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
+import '../src/assets/css/login-page.css';
+import '../src/assets/css/profilePage.css';
+// import '../src/assets/css/style.css';
 
 import './assets/scss/custom.scss';
 import './index.css';
+
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

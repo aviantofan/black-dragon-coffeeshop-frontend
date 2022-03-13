@@ -1,0 +1,28 @@
+.img-product {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-product {
+  height: 88px;
+}
+
+.form-checkbox {
+  height: 70px;
+  width: 100%;
+}
+
+.btn-product-size {
+  height: 70px;
+  width: 100%;
+}
+
+.btn-deliver-method {
+  height: 72px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: ">"
+}
