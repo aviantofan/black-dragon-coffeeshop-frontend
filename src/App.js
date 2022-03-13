@@ -1,13 +1,13 @@
 // import React from "react";
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import { getUser } from './redux/actions/auth';
+// import { getUser } from './redux/actions/auth';
 
 function App () {
-  const { auth } = useSelector(state => state);
+  // const { auth } = useSelector(state => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,9 +21,9 @@ function App () {
           }
         }
       });
-      dispatch(getUser(token));
+      // dispatch(getUser(token, auth.results.id));
     }
-  }, [dispatch, auth.token]);
+  }, [dispatch]);
 
   return (
     <BrowserRouter>

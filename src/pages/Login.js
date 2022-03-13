@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <>
-    {auth.token !== null && <Navigate to='/' />}
+    {auth.results.token !== null && <Navigate to='/' />}
     <div className='login-page'>
       <section>
         <div className='row'>

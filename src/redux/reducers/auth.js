@@ -35,11 +35,14 @@ const auth = (state = signupState, action) => {
       return { ...state };
     }
     case 'AUTH_LOGIN_FULFILLED': {
-      const { data } = action.payload;
-      state.token = data.result.token;
+      const { result } = action.payload.data;
+      // console.log('test', token);
+      state.results = { ...result };
+      // state.token = data.result.token;
       state.isLoading = false;
       state.isError = false;
-      window.localStorage.setItem('token', state.token);
+      window.localStorage.setItem('token', state.results.token);
+      console.log('test', state.results);
       return { ...state };
     }
     case 'AUTH_LOGIN_REJECTED': {

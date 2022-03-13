@@ -24,9 +24,9 @@ export const login = (email, password) => {
   });
 };
 
-export const getUser = (token) => {
+export const getUser = (token, id) => {
   return ({
     type: 'AUTH_USER',
-    payload: http(token).get('/profile')
+    payload: http(token).get(`/profile/${id}`)
   });
 };
