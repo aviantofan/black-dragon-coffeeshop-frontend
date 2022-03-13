@@ -5,7 +5,6 @@ const http = (token) => {
   const headers = {};
   if (token) {
     headers.Authorization = `Bearer ${token}`;
-    // console.log('test', headers)
   }
   return axios.create({
     baseURL: REACT_APP_API_URL,
