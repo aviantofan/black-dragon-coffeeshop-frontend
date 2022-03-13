@@ -7,11 +7,12 @@ import google from '../assets/images/google.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { login } from '../redux/actions/auth';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const dispatch = useDispatch();
   const { auth } = useSelector(state => state);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,10 +34,10 @@ const Login = () => {
           <div className='col-12 col-lg-6 background-section'></div>
           <div className='col-12 col-lg-6 px-5 top-section'>
             <div className='my-5 d-flex flex-row justify-content-between'>
-              <div className='logo'>
+              <div style={{ cursor: 'pointer' }} onClick={() => navigate('/')} className='logo'>
                 <img src={logo} alt='logo' />
               </div>
-              <Button className='px-5'>Sign Up</Button>
+              <Button onClick={() => navigate('/signup')} className='px-5'>Sign Up</Button>
             </div>
             <div className='text-center'>
               <h2 className='text-secondary text-center my-5'>Login</h2>

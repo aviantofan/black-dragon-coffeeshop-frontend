@@ -74,10 +74,10 @@ const Signup = () => {
           <div className='col-12 col-lg-6 background-section'></div>
           <div className='col-12 col-lg-6 px-5 top-section'>
             <div className='my-5 d-flex flex-row justify-content-between'>
-              <div className='logo'>
+              <div style={{ cursor: 'pointer' }} onClick={() => navigate('/')} className='logo'>
                 <img src={logo} alt='logo' />
               </div>
-              <Button className='px-5'>Login</Button>
+              <Button onClick={() => navigate('/login')} className='px-5'>Login</Button>
             </div>
             <div className='text-center'>
               <h2 className='text-secondary text-center my-5'>{isVerify ? 'Verify' : 'Signup'}</h2>
