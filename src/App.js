@@ -14,6 +14,7 @@ import EditPromoAdmin from './pages/EditPromoAdmin';
 import ChatUser from './pages/ChatUser';
 import PaymentDetails from './pages/PaymentDetails';
 import EditSaveProduct from './pages/EditSaveProduct';
+import ManageOrder from './pages/ManageOrder';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 // import { getUser } from './redux/actions/auth';
@@ -61,6 +62,7 @@ function App () {
         <Route path='/promo/edit' element={<EditPromoAdmin/>}/>
         <Route path='/chat' element={<ChatUser/>}/>
         <Route path='/payment/:id' element={<PaymentDetails />}/>
+        <Route path='/manage-order' element={<ManageOrder/>}/>
       </Routes>
     </BrowserRouter>
   );
