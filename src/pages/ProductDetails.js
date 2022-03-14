@@ -12,6 +12,7 @@ import { getDeliveryMethods } from '../redux/actions/deliveryMethods';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import getSize from '../redux/actions/size';
 import { increment, decrement, setDataProduct, setSizePrd, setDelivery, setDeliveryTIme } from '../redux/actions/dataChart';
+import { setAddCharts } from '../redux/actions/addCharts';
 
 export default function ProductDetails () {
   const { id } = useParams();
@@ -51,14 +52,16 @@ export default function ProductDetails () {
     e.preventDefault();
     const time = document.getElementById('timeDelivery').value;
     dispatch(setDeliveryTIme(time));
-    console.log('waktu', time);
-    navigate(`/payment/${id}`);
+    dispatch(setAddCharts(dataChart));
+    navigate('/payment');
   };
-  // const buttonCLick = (id) => {
-  //   const element = document.getElementById(id);
-  //   element.remove('class', 'selected');
-  //   element.classList.add('class', 'selected');
-  // };
+  const handleAddChart = (e) => {
+    e.preventDefault();
+    const time = document.getElementById('timeDelivery').value;
+    dispatch(setDeliveryTIme(time));
+    dispatch(setAddCharts(dataChart));
+    alert('Successfully add to chart');
+  };
 
   return (
     <Layout useNavbar>
@@ -119,7 +122,7 @@ export default function ProductDetails () {
               </div>
               <h3 className='price fw-bold'>IDR {new Intl.NumberFormat('id-ID', { maximumSignificantDigits: 3 }).format(price * dataChart.totalItem)}</h3>
             </div>
-            <button className='py-4 btn btn-primary w-100 mt-5'>Add to Cart</button>
+            <button onClick={handleAddChart} className='py-4 btn btn-primary w-100 mt-5'>Add to Cart</button>
             <button className='py-4 btn btn-secondary w-100 mt-4'>Ask to Staff</button>
           </div>
         </div>
