@@ -91,7 +91,16 @@ export default function ProductList () {
                 {productList.results.map(data => {
                   const { name, price, image, id } = data;
                   const noImage = 'localhost:5000/';
-                  return <CardProduct onClick={() => navigate(`${id}`)} image={image === noImage ? defaultImage : `http://${image}`} name={name} price={price} key={id} />;
+                  return (
+                    <CardProduct
+                      onClick={() => navigate(`${id}`)}
+                      // image={image === noImage ? defaultImage : `http://${image}`}
+                      image={image || defaultImage}
+                      name={name}
+                      price={price}
+                      key={id}
+                    />
+                  );
                 })}
               </div>
             </div>

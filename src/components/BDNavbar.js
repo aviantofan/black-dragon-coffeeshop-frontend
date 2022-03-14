@@ -44,7 +44,7 @@ export default function BDNavbar () {
             <Link to='/' className='active text-secondary fw-bold me-lg-2' href="/">Home</Link>
             <Link to='/products' className='mx-lg-2' href="/products">Product</Link>
             <Link to='/payment' className='mx-lg-2' href="/cart">Your Cart</Link>
-            <Link to='/history' className='ms-lg-2' href="/history">History</Link>
+            <Link to='/histories' className='ms-lg-2' href="/history">History</Link>
           </Nav>
           {
             isLogin

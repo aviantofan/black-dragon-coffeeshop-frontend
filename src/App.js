@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails';
 import Home from './pages/Home';
 import HomeAdmin from './pages/HomeAdmin';
 import EditPromoAdmin from './pages/EditPromoAdmin';
+import HistoriesList from './pages/HistoriesList';
 import ChatUser from './pages/ChatUser';
 import PaymentDetails from './pages/PaymentDetails';
 import EditSaveProduct from './pages/EditSaveProduct';
@@ -59,6 +60,8 @@ function App () {
 
         <Route path='/promo/add' element ={<InputPromo />}/>
         <Route path='/promo/edit' element={<EditPromoAdmin/>}/>
+
+        <Route path='/histories' element ={<HistoriesList />}/>
         <Route path='/chat' element={<ChatUser/>}/>
         <Route path='/payment' element={<PaymentDetails />}/>
       </Routes>
