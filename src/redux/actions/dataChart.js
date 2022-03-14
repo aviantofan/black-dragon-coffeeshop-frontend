@@ -10,11 +10,11 @@ export const decrement = () => {
   };
 };
 
-export const setDataProduct = (price) => {
+export const setDataProduct = (id) => {
   return {
     type: 'SET_DATA_PRODUCT',
     payload: {
-      price
+      id
     }
   };
 };

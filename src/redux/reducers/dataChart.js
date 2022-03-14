@@ -13,10 +13,10 @@ const counterState = {
 const dataChart = (state = counterState, action) => {
   switch (action.type) {
     case 'SET_DATA_PRODUCT': {
-      const { price } = action.payload;
-      state.totalPrice = price;
+      const { id } = action.payload;
+      // state.totalPrice = price;
       // console.log('price', action.payload);
-      // state.idProduct = id;
+      state.idProduct = id;
       return { ...state };
     }
     case 'COUNTER_INCREMENT': {
