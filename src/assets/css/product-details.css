@@ -66,6 +66,9 @@
   width: 60px;
   height: 60px;
 }
+.product-details .btn-size:focus {
+  background-color: rgb(64, 125, 95);
+}
 .product-details .img-bottom {
   width: 70px;
   height: 70px;
@@ -103,6 +106,9 @@
   }
   .product-details .now-btn .yes {
     margin-right: 7px !important;
+  }
+  .product-details .btn-now:focus {
+    background-color: #A5C3A9;
   }
 }
 @media all and (max-width: 760px) {
