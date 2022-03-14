@@ -10,10 +10,12 @@ import defaultImage from '../assets/images/default-image.jpg';
 import { useDispatch, useSelector } from 'react-redux';
 import { products, getNextProducts } from '../redux/actions/products';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductList () {
   const dispatch = useDispatch();
   const { productList } = useSelector(state => state);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -89,7 +91,7 @@ export default function ProductList () {
                 {productList.results.map(data => {
                   const { name, price, image, id } = data;
                   const noImage = 'localhost:5000/';
-                  return <CardProduct image={image === noImage ? defaultImage : `http://${image}`} name={name} price={price} key={id} />;
+                  return <CardProduct onClick={() => navigate(`${id}`)} image={image === noImage ? defaultImage : `http://${image}`} name={name} price={price} key={id} />;
                 })}
               </div>
             </div>
