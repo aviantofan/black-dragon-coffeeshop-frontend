@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 // import { Link } from 'react-router-dom';
 import '../assets/css/login-page.css';
 import logo from '../assets/images/logo.png';
@@ -9,7 +10,7 @@ import google from '../assets/images/google.png';
 // import { signup as register } from '../redux/actions/auth';
 import http from '../helpers/http';
 // import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Layout from '../layouts/Layout';
 
 const Signup = () => {
@@ -39,14 +40,22 @@ const Signup = () => {
     http().post('/auth/signup', param).then(res => {
       if (res.status < 400) {
         setLoading(false);
-        alert('success regist');
+        Swal.fire(
+          'Success',
+          res.data.message,
+          'success'
+        );
         setEmailVerify(email);
         setPasswordInput(password);
         setIsVeriry(true);
       }
     }).catch(err => {
       setLoading(false);
-      alert(err.response.data.message);
+      Swal.fire(
+        'Error',
+        err.response.data.message,
+        'error'
+      );
       setIsVeriry(false);
     });
   };
@@ -61,10 +70,19 @@ const Signup = () => {
     param.append('confirmPassword', passwordInput);
     http().post('/auth/verify-reset', param).then(res => {
       if (res.status < 400) {
+        Swal.fire(
+          'Success',
+          res.data.message,
+          'success'
+        );
         navigate('/login');
       }
     }).catch(err => {
-      alert(err.response.data.message);
+      Swal.fire(
+        'Error',
+        err.response.data.message,
+        'error'
+      );
     });
   };
 
@@ -89,7 +107,6 @@ const Signup = () => {
                 <Input label='password' idInput='password' type='password' cls='mt-5' />
                 <Input label='phone number' idInput='phone' type='number' cls='mt-5' />
                 <div className='text-start input-section my-3'>
-                  <a href='#'>Forgot Password?</a>
                 </div>
                 {loading
                   ? <div className="spinner-border" role="status">
