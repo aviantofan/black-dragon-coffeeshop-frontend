@@ -105,7 +105,7 @@ const ForgotPage = () => {
                       <div className="row justify-content-center">
                         <div className="col-md-6 mb-3">
                           {
-                            !codeSended
+                            codeSended
                               ? <input
                                 placeholder={`${codeSended ? 'Enter code here' : 'Enter your email'}`}
                                 name="email"
