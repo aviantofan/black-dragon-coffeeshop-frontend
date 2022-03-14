@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import Input from '../components/Input';
 import google from '../assets/images/google.png';
 import Layout from '../layouts/Layout';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { login } from '../redux/actions/auth';
@@ -52,7 +52,7 @@ const Login = () => {
                 <Input label='email adress' idInput='email' type='email' />
                 <Input label='password' cls='mt-5' idInput='password' type='password' />
                 <div className='text-start input-section my-3'>
-                  <a href='#'>Forgot Password?</a>
+                  <Link to='/forgot'>Forgot Password?</Link>
                 </div>
                 <button type='submit' className='btn btn-primary btn-full my-3'>Login</button>
                 <button className='btn btn-secondary btn-full'><img src={google} alt='google' className='pe-1' /> Login With Google</button>

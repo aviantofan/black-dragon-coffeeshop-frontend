@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import ForgotPage from './pages/forgotPage';
+import ForgotPage from './pages/ForgotPage';
 import ProfilePage from './pages/profilePage';
 import InputProduct from './pages/InputProduct';
 import InputPromo from './pages/InputPromo';
