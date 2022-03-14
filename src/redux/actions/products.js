@@ -13,3 +13,10 @@ export const getNextProducts = (page) => {
     payload: http().get(`/products?page=${page}&limit=8`)
   };
 };
+
+export const getProductDetail = (id) => {
+  return {
+    type: 'GET_PRODUCT_DETAIL',
+    payload: http().get(`/products/${id}`)
+  };
+};
