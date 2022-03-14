@@ -1,0 +1,46 @@
+.payment-detail {
+  background-image: url(../images/bg-payment-detail.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .opacity {
+    padding: 70px 0;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  h1 {
+    font-family: 'Rubik', sans-serif;
+  }
+  .card-left {
+    padding-right: 90px;
+  }
+  .card-right {
+    padding-left: 90px;
+  }
+  .card {
+    border-radius: 10px;
+  }
+  .img-product {
+    width: 70px;
+    height: 85px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .adress {
+    width: 70%;
+  }
+  .payment-list {
+    border-radius: 10px;
+  }
+  .bg-third {
+    background-color: #e1c57f;
+  }
+  @media all and (max-width: 992px) {
+    .card-right {
+      padding-left: 10px;
+    }
+    .card-left {
+      padding-right: 10px;
+    }
+  }
+}

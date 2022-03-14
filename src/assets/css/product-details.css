@@ -1,0 +1,126 @@
+.product-details {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+.product-details .route a {
+  text-decoration: none;
+}
+.product-details .img-product{
+  width: 210px;
+  height: 210px;
+  border-radius: 115px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.product-details .trash {
+  font-size: 40px;
+  position: absolute;
+  left: 160px;
+  bottom: 11px;
+  border-radius: 20px;
+}
+.product-details .delivery-card {
+  border-radius: 15px;
+  box-shadow: 0px 11px 40px -3px rgba(0,0,0,17%);
+  -webkit-box-shadow: 0px 11px 40px -3px rgba(0,0,0,17%);
+  -moz-box-shadow: 0px 11px 40px -3px rgba(0,0,0,17%);
+}
+.product-details .delivery-card .btn:hover {
+  background-color: #A5C3A9 !important;
+}
+.product-details .delivery-card .door {
+  margin: 0 7px;
+}
+.product-details .time-input {
+  padding: 15px 10px;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+}
+.product-details .time-input::placeholder {
+  color: rgb(73, 73, 73);
+}
+.product-details .right-side h2 {
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+}
+.product-details .decrement {
+  border-radius: 10px 0  0 10px;
+}
+.product-details .increment {
+  border-radius: 0 10px 10px 0;
+}
+.product-details .counter .border {
+  border: 1px solid rgb(164, 164, 164) !important;
+}
+.product-details .size-container,
+.product-details .checkout-container {
+  border-radius: 15px;
+  box-shadow: 0px 11px 40px -3px rgba(0,0,0,17%);
+  -webkit-box-shadow: 0px 11px 40px -3px rgba(0,0,0,17%);
+  -moz-box-shadow: 0px 11px 40px -3px rgba(0,0,0,17%);
+}
+.product-details .btn-size {
+  border-radius: 50px !important;
+  width: 60px;
+  height: 60px;
+}
+.product-details .img-bottom {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.product-details .check-out {
+  text-decoration: none;
+}
+.product-details .btn-check-out {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+@media all and (max-width: 1199px) {
+  .product-details .delivery-choice button {
+    padding: 10px !important;
+  }
+}
+@media all and (max-width: 992px) {
+  .product-details .delivery-choice button {
+    padding: 10px 40px !important;
+  }
+  .product-details .time-input {
+    width: 100%;
+  }
+  .product-details .delivery-choice {
+    justify-content: space-between;
+  }
+  .product-details .now-btn button {
+    width: 48.9% !important;
+    margin: 0 !important;
+  }
+  .product-details .now-btn .yes {
+    margin-right: 7px !important;
+  }
+}
+@media all and (max-width: 760px) {
+  .product-details .delivery-choice {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .product-details .delivery-choice .btn {
+    width: 100% !important;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+@media all and (max-width: 565px) {
+  .product-details .now-btn button {
+    width: 48.2% !important;
+  }
+  .product-details {
+    padding: 0 20px;
+  }
+}
