@@ -10,13 +10,23 @@ import profilePlaceholder from '../assets/img/profile-pict-placeholder.png';
 
 import '../assets/scss/BDNavbar.scss';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function BDNavbar () {
+  const { auth } = useSelector(state => state);
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
-    setIsLogin(true);
+    if (auth.results.token) {
+      setIsLogin(true);
+    } else {
+      setIsLogin(false);
+    }
     console.log('isLogin', isLogin);
+  }, [auth.results]);
+
+  useEffect(() => {
+    // console.log('auth', auth);
   }, []);
 
   return (
@@ -30,11 +40,11 @@ export default function BDNavbar () {
         </Navbar.Brand>
         <Navbar.Toggle className='border-0 box-focus-shadow-none' aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto me-lg-5 mb-3 mb-lg-0">
-            <Nav.Link className='active text-secondary fw-bold me-lg-2' href="/">Home</Nav.Link>
-            <Nav.Link className='mx-lg-2' href="/products">Product</Nav.Link>
-            <Nav.Link className='mx-lg-2' href="/cart">Your Cart</Nav.Link>
-            <Nav.Link className='ms-lg-2' href="/history">History</Nav.Link>
+          <Nav className="bd-nav-link ms-auto me-lg-5 mb-3 mb-lg-0">
+            <Link to='/' className='active text-secondary fw-bold me-lg-2' href="/">Home</Link>
+            <Link to='/products' className='mx-lg-2' href="/products">Product</Link>
+            <Link to='/' className='mx-lg-2' href="/cart">Your Cart</Link>
+            <Link to='/history' className='ms-lg-2' href="/history">History</Link>
           </Nav>
           {
             isLogin
