@@ -7,6 +7,13 @@
   height: 88px;
 }
 
+.btn-product-size {
+  height: 80px !important;
+  width: 80px !important;
+  border-radius: 200px;
+  margin: 5px;
+}
+
 .form-checkbox {
   height: 70px;
   width: 100%;
@@ -23,6 +30,11 @@
   font-size: 20px;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.btn-delivery {
+  height: 50px;
+  margin: 5px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
   content: ">";
 }

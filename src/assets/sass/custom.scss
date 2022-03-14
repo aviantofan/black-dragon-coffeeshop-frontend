@@ -1,10 +1,9 @@
-@import 'bootstrap/scss/functions';
+@import "bootstrap/scss/functions";
 
-@import './palletes.scss';
-@import './colors.scss';
+@import "./palletes.scss";
+@import "./colors.scss";
 
-
-$btn-border-radius:          1.25rem !default;
+$btn-border-radius: 1.25rem !default;
 // $btn-padding-y:               1.0rem !default;
 
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";

@@ -5,12 +5,29 @@ import mother from '../assets/images/mother.png';
 import father from '../assets/images/father.png';
 import grandFather from '../assets/images/grand-father.png';
 import CardPromo from '../components/CardPromo';
-import product from '../assets/images/product.jpg';
 import CardProduct from '../components/CardProduct';
+import defaultImage from '../assets/images/default-image.jpg';
+import { useDispatch, useSelector } from 'react-redux';
+import { products, getNextProducts } from '../redux/actions/products';
+import { useEffect } from 'react';
 
 export default function ProductList () {
+  const dispatch = useDispatch();
+  const { productList } = useSelector(state => state);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    dispatch(products());
+    console.log('test', productList);
+  }, [dispatch]);
+
+  const nextPage = (e) => {
+    e.preventDefault();
+    dispatch(getNextProducts(productList.pageInfo.currentPage + 1));
+  };
+
   return (
-   <Layout>
+    <Layout>
       <div className='product-list border-top container'>
         <div className='row main-content'>
           <aside className='col-12 col-lg-4 pt-5 pe-5 border-end'>
@@ -59,34 +76,32 @@ export default function ProductList () {
           </aside>
           <section className='col-12 col-lg-8 pt-3 ps-5'>
             <div className='list-category'>
-              <ul className='list-group d-flex flex-row justify-content-between'>
-                <li><a href='#' className='category text-primary'>Favorite & Promo</a></li>
-                <li><a href='#' className='category text-primary'>Coffe</a></li>
-                <li><a href='#' className='category text-primary'>Non Coffe</a></li>
-                <li><a href='#' className='category text-primary'>Foods</a></li>
-                <li><a href='#' className='category text-primary'>Add-on</a></li>
+              <ul className='list-group row g-0 d-flex flex-row justify-content-between'>
+                <li className='col-4 col-md-auto mt-2 mt-md-0'><a href='#' className='category text-primary'>Favorite & Promo</a></li>
+                <li className='col-4 col-md-auto mt-2 mt-md-0'><a href='#' className='category text-primary'>Coffe</a></li>
+                <li className='col-4 col-md-auto mt-2 mt-md-0'><a href='#' className='category text-primary'>Non Coffe</a></li>
+                <li className='col-4 col-md-auto mt-2 mt-md-0'><a href='#' className='category text-primary'>Foods</a></li>
+                <li className='col-4 col-md-auto mt-2 mt-md-0'><a href='#' className='category text-primary'>Add-on</a></li>
               </ul>
             </div>
             <div className='product-list mt-5'>
               <div className='row g-5'>
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' />
-                <CardProduct image={product} name='Summer Fried Chicken' price='50.000' discount='50%' />
+                {productList.results.map(data => {
+                  const { name, price, image, id } = data;
+                  const noImage = 'localhost:5000/';
+                  return <CardProduct image={image === noImage ? defaultImage : `http://${image}`} name={name} price={price} key={id} />;
+                })}
               </div>
             </div>
+            {productList.pageInfo.nextPage
+              ? <div className='mt-5'>
+              <button onClick={nextPage} className='btn btn-secondary w-100 py-4 fw-bold'>Next</button>
+            </div>
+              : <div></div>}
             <div className='mt-4'>*the price has been cutted by discount appears</div>
           </section>
         </div>
       </div>
-   </Layout>
+    </Layout>
   );
 }

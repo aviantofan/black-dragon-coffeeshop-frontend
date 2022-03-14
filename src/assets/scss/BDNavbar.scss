@@ -1,6 +1,5 @@
 .bd-navbar {
-  
-  border-bottom: 0.5px solid #9F9F9F;
+  border-bottom: 0.5px solid #9f9f9f;
 
   .chat-icon {
     font-size: 2rem;
@@ -16,12 +15,19 @@
     top: 28%;
     right: 1.5rem;
   }
+
+  .bd-nav-link {
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   .bd-navbar {
     .logged-wrapper {
       flex-direction: row-reverse;

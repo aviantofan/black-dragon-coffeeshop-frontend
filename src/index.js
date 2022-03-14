@@ -2,23 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle';
-import './assets/sass/custom.scss';
+// import './assets/sass/custom.scss';
 // import './assets/css/style.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+
 import '../src/assets/css/login-page.css';
+import '../src/assets/css/profilePage.css';
+// import '../src/assets/css/style.css';
 
 import './assets/scss/custom.scss';
 import './index.css';
-
+import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './redux/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
