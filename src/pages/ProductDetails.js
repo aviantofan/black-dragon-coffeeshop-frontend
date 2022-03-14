@@ -13,6 +13,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import getSize from '../redux/actions/size';
 import { increment, decrement, setDataProduct, setSizePrd, setDelivery, setDeliveryTIme } from '../redux/actions/dataChart';
 import { setAddCharts } from '../redux/actions/addCharts';
+import { getPaymentChart } from '../redux/actions/paymentCharts';
 
 export default function ProductDetails () {
   const { id } = useParams();
@@ -53,6 +54,7 @@ export default function ProductDetails () {
     const time = document.getElementById('timeDelivery').value;
     dispatch(setDeliveryTIme(time));
     dispatch(setAddCharts(dataChart));
+    dispatch(getPaymentChart(id));
     navigate('/payment');
   };
   const handleAddChart = (e) => {
@@ -60,6 +62,7 @@ export default function ProductDetails () {
     const time = document.getElementById('timeDelivery').value;
     dispatch(setDeliveryTIme(time));
     dispatch(setAddCharts(dataChart));
+    dispatch(getPaymentChart(id));
     alert('Successfully add to chart');
   };
 
