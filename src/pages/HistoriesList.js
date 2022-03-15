@@ -37,6 +37,10 @@ export default function HistoriesList () {
     }
   };
 
+  const setTrigger = () => {
+    setHistories([]);
+  };
+
   return (
     <Layout>
       <section className='histories-list-page'>
@@ -47,29 +51,24 @@ export default function HistoriesList () {
               <span>Long press to delete item</span>
             </div>
             <div className='row g-4 data-histories'>
-              {histories.map((data, index) => {
+              {
+                histories.length < 1 && (
+                  <div className='col-12 text-center'>
+                    <h3 className='text-cream' >You don`t have any history yet</h3>
+                  </div>
+                )
+              }
+              {histories.length > 0 && histories.map((data, index) => {
                 return (
-                // <div key={index} className='col-12 col-md-6 col-lg-4 position-relative'>
-                //   <div style={{ cursor: 'pointer' }} className='card d-flex flex-row  p-3 p-xl-2 p-xxl-4'>
-                //     <div className='img-product' style={{ backgroundImage: `url(${imgProduct})` }}></div>
-                //     <div className='history-text ps-3'>
-                //       <h4>Veggie tomato mix</h4>
-                //       <div>IDR 34.000</div>
-                //       <div>Delivered</div>
-                //     </div>
-                //   </div>
-                //   <div id={`number${index}`} className={`position-absolute delete-option d-${!showDelete ? 'none' : 'block'}`}>
-                //     <button className='btn-delete bg-secondary'><FiTrash2/></button>
-                //     <button className='btn-delete bg-primary ms-2 fw-bold'>x</button>
-                //   </div>
-                // </div>
                 <BDHistoryItem
                   onClick={(e) => console.log(e)}
                   key={data.id}
-                  productName={data.name}
-                  price={priceFormat(data.price)}
+                  idHistory={data.id}
+                  productName={data.name || 'Untitled product'}
+                  price={priceFormat(data.total)}
                   deliveryStatus={data.deliveryStatus}
                   imgProduct={ data.image || imgProduct}
+                  trigger={setTrigger}
                 />
                 );
               })}
