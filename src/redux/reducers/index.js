@@ -6,6 +6,7 @@ import productDetail from './productDetail';
 import size from './size';
 import dataChart from './dataChart';
 import addCharts from './addCharts';
+import paymentCharts from './paymentCharts';
 
 const rootReducer = combineReducers({
   auth,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   deliveryMethods,
   size,
   dataChart,
-  addCharts
+  addCharts,
+  paymentCharts
 });
 
 export default rootReducer;

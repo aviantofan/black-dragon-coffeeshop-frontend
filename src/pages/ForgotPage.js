@@ -102,7 +102,7 @@ const ForgotPage = () => {
                     <h1 className="heading">Forgot your password?</h1>
                     <h3 className="heading">Don’t worry, we got your back!</h3>
                     <form onSubmit={submitHandler}>
-                      <div className="row justify-content-center">
+                      <div className={`row justify-content-center ${codeSended ? 'flex-column align-items-center' : ''} `}>
                         <div className="col-md-6 mb-3">
                           {
                             !codeSended
@@ -143,7 +143,7 @@ const ForgotPage = () => {
                                 )
                           }
                         </div>
-                        <div className="col-md-2 mb-3">
+                        <div className={` ${!codeSended ? 'col-md-2 mb-3' : 'col-md-6 mb-3'} `}>
                           <button className="btn btn-primary send w-100">
                             {
                               !loading && (
