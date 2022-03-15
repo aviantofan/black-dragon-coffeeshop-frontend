@@ -17,7 +17,7 @@ export default function BDNavbar () {
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
-    if (auth.results.token) {
+    if (auth.token) {
       setIsLogin(true);
     } else {
       setIsLogin(false);
