@@ -15,6 +15,7 @@ import HistoriesList from './pages/HistoriesList';
 import ChatUser from './pages/ChatUser';
 import PaymentDetails from './pages/PaymentDetails';
 import EditSaveProduct from './pages/EditSaveProduct';
+import DashboardAdmin from './pages/DashboardAdmin';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 // import { getUser } from './redux/actions/auth';
@@ -46,6 +47,7 @@ function App () {
       <Routes>
         <Route path='/' element={ <PublicRoute page={<Home />} /> }/>
         <Route path='/admin' element={<HomeAdmin/>}/>
+        <Route path='/dashboardadmin' element={<DashboardAdmin/>}/>
 
         <Route path='/login' element={ <PublicRoute restricted={true} page={<Login />} /> }/>
         <Route path='/signup' element={ <PublicRoute restricted={true} page={<Signup />} /> }/>
