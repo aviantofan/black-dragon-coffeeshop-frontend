@@ -23,6 +23,7 @@ export default function ProductDetails () {
   // const [sizePrd, setSizePrd] = useState(['large']);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     dispatch(getProductDetail(id));
     dispatch(getDeliveryMethods());
     dispatch(getSize());

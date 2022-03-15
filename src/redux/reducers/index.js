@@ -7,6 +7,8 @@ import size from './size';
 import dataChart from './dataChart';
 import addCharts from './addCharts';
 import paymentCharts from './paymentCharts';
+import addHistory from './addHistory';
+import addProductHistory from './addProductHistory';
 
 const rootReducer = combineReducers({
   auth,
@@ -16,7 +18,9 @@ const rootReducer = combineReducers({
   size,
   dataChart,
   addCharts,
-  paymentCharts
+  paymentCharts,
+  addHistory,
+  addProductHistory
 });
 
 export default rootReducer;

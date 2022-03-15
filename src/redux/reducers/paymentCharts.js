@@ -25,6 +25,10 @@ const paymentCharts = (state = productDetailState, action) => {
       state.isError = true;
       return { ...state };
     }
+    case 'EMPTY_PAYMENT_CHARTS': {
+      state.results = [];
+      return { ...state };
+    }
     default: {
       return { ...state };
     }
