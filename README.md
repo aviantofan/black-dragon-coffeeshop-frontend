@@ -7,6 +7,11 @@
 <br>
 </div>
 
+## 📍 About
+Repository Frontend - Black Dragon Coffeeshop
+
+<br>
+
 ## 📌 How To Install?
 
 - Clone This Repo
@@ -23,7 +28,7 @@ npm install
 ```
 - Type ``` npm run start ``` To Start The Project
 
-<br/>
+<br>
 
 ## 🔎 Preview Design
   <span>
@@ -34,26 +39,33 @@ npm install
     <br/>
   </span>
 
+<br>
+
 ## ✍️ Black Dragon - Backend Link
-https://github.com/eexxprd/black-dragon-coffeeshop-backend  
+https://github.com/eexxprd/black-dragon-coffeeshop-backend 
+
+<br>
 
 ## ⛏️ Built Using
 
 - [Axios](https://www.npmjs.com/package/axios)
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
-- [Node SASS](https://www.npmjs.com/package/node-sass)
+- [Node Sass](https://www.npmjs.com/package/node-sass)
 - [React](https://reactjs.org/docs/getting-started.html)
 - [React-Bootstrap](https://www.npmjs.com/package/react-bootstrap)
 - [React-DOM](https://www.npmjs.com/package/react-dom)
 - [React-Icons](https://www.npmjs.com/package/react-icons)
-- [react-Loading-Skeleton](https://www.npmjs.com/package/react-loading-skeleton)
+- [React-Loading-Skeleton](https://www.npmjs.com/package/react-loading-skeleton)
 - [React-Redux](https://www.npmjs.com/package/react-redux)
 - [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 - [Redux](https://www.npmjs.com/package/redux)
 - [Redux-Logger](https://www.npmjs.com/package/redux-logger)
 - [Redux-Promise-Middleware](https://www.npmjs.com/package/redux-promise-middleware)
 - [Sweetalert2](https://www.npmjs.com/package/sweetalert2)
+- [Eslint](https://www.npmjs.com/package/eslint)
+
+<br>
 
 ## 🤝 Black Dragon - Team Project
 |                                              [Nabil Hardiansa](https://github.com/nhardiansa)                                               |                                           [Asher Azriel Ginting](https://github.com/asherginting)                                            |                                                   [Rinto Saputro](https://github.com/rintosaputro)                                                   |                                         [Marsella Valeria](https://github.com/marsellavaleria19)                                         |                                                     [Tofan Avianto](https://github.com/eexxprd)                                                      |
