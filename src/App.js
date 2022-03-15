@@ -18,7 +18,7 @@ import EditSaveProduct from './pages/EditSaveProduct';
 import DashboardAdmin from './pages/DashboardAdmin';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-// import { getUser } from './redux/actions/auth';
+import { getUser } from './redux/actions/auth';
 
 import { PublicRoute, PrivateRoute } from './components/CustomRoute';
 
@@ -29,7 +29,6 @@ function App () {
   useEffect(() => {
     const user = JSON.parse(window.localStorage.getItem('user'));
     if (user) {
-      console.log('token', user);
       dispatch({
         type: 'AUTH_LOGIN_FULFILLED',
         payload: {
@@ -38,7 +37,7 @@ function App () {
           }
         }
       });
-      // dispatch(getUser(user.token, auth.results.id));
+      dispatch(getUser(user.token, auth.results.userProfileId));
     }
   }, [dispatch, auth.results.id]);
 

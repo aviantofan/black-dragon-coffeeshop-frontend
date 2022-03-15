@@ -1,5 +1,6 @@
 const signupState = {
   results: {},
+  dataUser: {},
   token: null,
   email: '',
   isLoading: false,
@@ -38,7 +39,7 @@ const auth = (state = signupState, action) => {
       const { result } = action.payload.data;
       // console.log('test', token);
       state.results = { ...result };
-      // state.token = result.token;
+      state.token = result.token;
       state.isLoading = false;
       state.isError = false;
       window.localStorage.setItem('user', JSON.stringify(result));
@@ -59,7 +60,9 @@ const auth = (state = signupState, action) => {
     }
     case 'AUTH_USER_FULFILLED': {
       const { data } = action.payload;
-      state.results = data.results;
+      // state.results = data.results;
+      state.dataUser = data.result;
+      console.log('test', data);
       state.isLoading = false;
       state.isError = false;
       return { ...state };
