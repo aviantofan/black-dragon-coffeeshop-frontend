@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://imgbb.com/"><img src="https://i.ibb.co/ZxSrxHb/black-dragon.png" alt="black-dragon" width='100'></a>
+</p>
+<div align="center">
+<h1>Black Dragon Coffeeshop</h1>
+<p>Black Dragon Coffeeshop is a store that sells some good meals, and especially coffee. We provide high quality beans</p>
+<br>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 How To Install?
 
-## Available Scripts
+- Clone This Repo
+```
+git clone https://github.com/eexxprd/black-dragon-coffeeshop-frontend
+```
+- Go To Folder Repo
+```
+cd black-dragon-coffeeshop-frontend
+```
+- Install Module
+```
+npm install
+```
+- Type ``` npm run start ``` To Start The Project
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
+## 🔎 Preview Design
+  <span>
+	<a href="https://ibb.co/CMt1VKK"><img src="https://i.ibb.co/Nm3VW22/Screenshot-from-2022-03-15-14-08-19.png" alt="Screenshot-from-2022-03-15-14-08-19" width='415'></a>
+	<a href="https://ibb.co/X7srwnD"><img src="https://i.ibb.co/y6yc3zp/Screenshot-from-2022-03-15-14-08-44.png" alt="Screenshot-from-2022-03-15-14-08-44" width='415'></a>
+    <a href="https://ibb.co/VCCYMGM"><img src="https://i.ibb.co/KssxVgV/Screenshot-from-2022-03-15-14-09-13.png" alt="Screenshot-from-2022-03-15-14-09-13" width='415'></a>
+    <a href="https://ibb.co/2WFFCX9"><img src="https://i.ibb.co/q7DDcbS/Screenshot-from-2022-03-15-14-09-33.png" alt="Screenshot-from-2022-03-15-14-09-33" width='415'></a>
+    <br/>
+  </span>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✍️ Black Dragon - Backend Link
+https://github.com/eexxprd/black-dragon-coffeeshop-backend  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⛏️ Built Using
 
-### `npm test`
+- [Axios](https://www.npmjs.com/package/axios)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Node SASS](https://www.npmjs.com/package/node-sass)
+- [React](https://reactjs.org/docs/getting-started.html)
+- [React-Bootstrap](https://www.npmjs.com/package/react-bootstrap)
+- [React-DOM](https://www.npmjs.com/package/react-dom)
+- [React-Icons](https://www.npmjs.com/package/react-icons)
+- [react-Loading-Skeleton](https://www.npmjs.com/package/react-loading-skeleton)
+- [React-Redux](https://www.npmjs.com/package/react-redux)
+- [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
+- [Redux](https://www.npmjs.com/package/redux)
+- [Redux-Logger](https://www.npmjs.com/package/redux-logger)
+- [Redux-Promise-Middleware](https://www.npmjs.com/package/redux-promise-middleware)
+- [Sweetalert2](https://www.npmjs.com/package/sweetalert2)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🤝 Black Dragon - Team Project
+|                                              [Nabil Hardiansa](https://github.com/nhardiansa)                                               |                                           [Asher Azriel Ginting](https://github.com/asherginting)                                            |                                                   [Rinto Saputro](https://github.com/rintosaputro)                                                   |                                         [Marsella Valeria](https://github.com/marsellavaleria19)                                         |                                                     [Tofan Avianto](https://github.com/eexxprd)                                                      |
+| :-----------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://ibb.co/ggQ7LCr"><img src="https://i.ibb.co/C04t3Fw/IMG-20210702-163619-2.jpg" alt="IMG-20210702-163619-2" width='200'></a> | <a href="https://ibb.co/rZ4KD8m"><img src="https://i.ibb.co/MRMyFws/IMG-20210402-181933-561.jpg" alt="Asher-Azriel-Ginting" width='200'></a> | <a href="https://ibb.co/sK82Dtq"><img src="https://i.ibb.co/2vGyL5d/Whats-App-Image-2022-03-15-at-13-35-40.jpg" alt="Rinto-Saputro" width='200'></a> | <a href="https://ibb.co/xX81Gyp"><img src="https://i.ibb.co/TYq4RZV/B612-20201102-234614-316.jpg" alt="Marsella-Valeria" width='75'></a> | <a href="https://ibb.co/jVJyG2j"><img src="https://i.ibb.co/k3m40fP/Whats-App-Image-2022-03-13-at-21-38-51.jpg" alt="Tofan-Avianto" width='200'></a> |
+|                                                       <b>PM & Fullstack Developer</b>                                                       |                                                          <b>Frontend Developer</b>                                                           |                                                              <b>Frontend Developer</b>                                                               |                                                         <b>Backend Developer</b>                                                         |                                                               <b>Backend Developer</b>                                                               |
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
