@@ -9,7 +9,7 @@ import logo from '../assets/img/logo.svg';
 import profilePlaceholder from '../assets/img/profile-pict-placeholder.png';
 
 import '../assets/scss/BDNavbar.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 export default function BDNavbar () {
@@ -41,10 +41,10 @@ export default function BDNavbar () {
         <Navbar.Toggle className='border-0 box-focus-shadow-none' aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="bd-nav-link ms-auto me-lg-5 mb-3 mb-lg-0">
-            <Link to='/' className='active text-secondary fw-bold me-lg-2' href="/">Home</Link>
-            <Link to='/products' className='mx-lg-2' href="/products">Product</Link>
-            <Link to='/payment' className='mx-lg-2' href="/cart">Your Cart</Link>
-            <Link to='/histories' className='ms-lg-2' href="/history">History</Link>
+            <NavLink className={(navData) => navData.isActive ? 'active nav-link text-secondary fw-bold me-lg-2' : 'nav-link fw-bold me-lg-2' } to='/'>Home</NavLink>
+            <NavLink className={(navData) => navData.isActive ? 'active nav-link text-secondary fw-bold mx-lg-2' : 'nav-link fw-bold mx-lg-2'} to='/products'>Product</NavLink>
+            <NavLink className={(navData) => navData.isActive ? 'active nav-link text-secondary fw-bold mx-lg-2' : 'nav-link fw-bold mx-lg-2'} to='/payment'>Your Cart</NavLink>
+            <NavLink className={(navData) => navData.isActive ? 'active nav-link text-secondary fw-bold mx-lg-2' : 'nav-link fw-bold mx-lg-2'} to='/histories'>History</NavLink>
           </Nav>
           {
             isLogin
