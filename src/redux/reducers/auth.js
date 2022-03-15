@@ -42,7 +42,6 @@ const auth = (state = signupState, action) => {
       state.isLoading = false;
       state.isError = false;
       window.localStorage.setItem('user', JSON.stringify(result));
-      console.log('test', state.results);
       return { ...state };
     }
     case 'AUTH_LOGIN_REJECTED': {

@@ -9,6 +9,10 @@ const addCharts = (state = intialState, action) => {
       state.results = [...state.results, data];
       return { ...state };
     }
+    case 'DELETE_RESULTS': {
+      state.results = [];
+      return { ...state };
+    }
     default: {
       return { ...state };
     }
