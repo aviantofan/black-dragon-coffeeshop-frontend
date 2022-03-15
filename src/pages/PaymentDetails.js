@@ -4,26 +4,53 @@ import '../assets/scss/paymentdetail.scss';
 import defaultImage from '../assets/images/default-image.jpg';
 import { FaIdCard, FaTruckMoving } from 'react-icons/fa';
 import { AiFillBank } from 'react-icons/ai';
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { addHistory } from '../redux/actions/addHistory';
+import { addProductHistory } from '../redux/actions/addProductHistory';
 
 export default function PaymentDetails () {
-  const { addCharts, paymentCharts } = useSelector(state => state);
+  const { addCharts, paymentCharts, dataChart, addHistory: dataHistory } = useSelector(state => state);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  // const [totalPrc, setTotalPrc] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
 
-  const handleConfirm = (e) => {
-    e.preventDefault();
-    navigate('/histories');
-  };
   let totalPrc = 0;
 
   const priceFormat = (price) => new Intl.NumberFormat('id-ID').format(price);
   const shipping = 30000;
+  const dateRepair = (data) => {
+    if (data < 10) data = '0' + data;
+    return data;
+  };
+
+  const handleConfirm = (e) => {
+    e.preventDefault();
+    const storage = window.localStorage.getItem('user');
+    const tokenRes = JSON.parse(storage).token;
+    const today = new Date();
+    const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    const time = dateRepair(today.getHours()) + ':' + dateRepair(today.getMinutes()) + ':' + dateRepair(today.getSeconds());
+    const deliveryTime = date + ' ' + time;
+    const subTotal = document.getElementById('subTotal').innerHTML.replace(/\./g, '');
+    const total = document.getElementById('totalPrice').innerHTML.replace(/\./g, '');
+    const reservationTime = date + ' ' + time;
+    const shippingCost = 30000;
+    const taxtId = 1;
+    const deliveryMethodId = 1;
+    const paymentMethodId = 1;
+    dispatch(addHistory(tokenRes, deliveryTime, Number(subTotal), Number(total), reservationTime, shippingCost, taxtId, deliveryMethodId, paymentMethodId));
+    // addCharts.results.map((data, index) => {
+    //   return dispatch(addProductHistory(tokenRes, dataHistory.results.id, data.idProduct, data.idSize, data.totalItem));
+    // });
+    console.log('test', dataHistory);
+    // navigate('/histories');
+  };
 
   return (
     <Layout>
@@ -53,7 +80,7 @@ export default function PaymentDetails () {
                   <hr className='my-5'/>
                   <div className='d-flex justify-content-between'>
                     <span>SUBTOTAL</span>
-                    <span>IDR {priceFormat(totalPrc)}</span>
+                    <span>IDR <span id='subTotal'>{priceFormat(totalPrc)}</span></span>
                   </div>
                   <div className='d-flex justify-content-between'>
                     <span>TAX & FEES</span>
@@ -65,7 +92,7 @@ export default function PaymentDetails () {
                   </div>
                   <div className='fw-bold my-3 my-lg-5 fs-4 d-flex justify-content-between'>
                     <span>TOTAL</span>
-                    <span>IDR {priceFormat(totalPrc + (totalPrc * (16 / 100)) + shipping)}</span>
+                    <span>IDR <span id='totalPrice'>{priceFormat(totalPrc + (totalPrc * (16 / 100)) + shipping)}</span></span>
                   </div>
                 </div>
               </div>
