@@ -58,6 +58,9 @@ export default function PaymentDetails () {
     dispatch({
       type: 'EMPTY_PAYMENT_CHARTS'
     });
+    dispatch({
+      type: 'EMPTY_ADD_CHARTS'
+    });
     navigate('/histories');
   };
 

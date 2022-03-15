@@ -9,7 +9,7 @@ const addCharts = (state = intialState, action) => {
       state.results = [...state.results, data];
       return { ...state };
     }
-    case 'DELETE_RESULTS': {
+    case 'EMPTY_ADD_CHARTS': {
       state.results = [];
       return { ...state };
     }
