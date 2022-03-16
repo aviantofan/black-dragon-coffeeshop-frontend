@@ -3,11 +3,11 @@ import logger from 'redux-logger';
 import promise from 'redux-promise-middleware';
 import rootReducer from './reducers';
 
-const { ENVIRONMENT } = process.env;
+const { NODE_ENV } = process.env;
 
 let store;
 
-if (ENVIRONMENT === 'development') {
+if (NODE_ENV === 'development') {
   store = createStore(
     rootReducer,
     applyMiddleware(
