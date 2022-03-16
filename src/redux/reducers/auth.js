@@ -62,7 +62,6 @@ const auth = (state = signupState, action) => {
       const { data } = action.payload;
       // state.results = data.results;
       state.dataUser = data.result;
-      console.log('test', data);
       state.isLoading = false;
       state.isError = false;
       return { ...state };

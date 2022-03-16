@@ -21,9 +21,11 @@ import { useEffect } from 'react';
 import { getUser } from './redux/actions/auth';
 
 import { PublicRoute, PrivateRoute } from './components/CustomRoute';
+import { getProductCategories } from './redux/actions/productCategories';
+import { products } from './redux/actions/products';
 
 function App () {
-  const { auth } = useSelector(state => state);
+  const { auth, productCategories } = useSelector(state => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -37,9 +39,13 @@ function App () {
           }
         }
       });
-      dispatch(getUser(user.token, auth.results.userProfileId));
+      dispatch(getUser(user.token, auth.results.id));
     }
   }, [dispatch, auth.results.id]);
+
+  useEffect(() => {
+    dispatch(getProductCategories());
+  }, []);
 
   return (
     <BrowserRouter>
@@ -52,9 +58,9 @@ function App () {
         <Route path='/signup' element={ <PublicRoute restricted={true} page={<Signup />} /> }/>
         <Route path='/forgot' element={ <PublicRoute restricted={true} page={<ForgotPage />} /> }/>
 
+        <Route path='/products' element ={<ProductList />}/>
         <Route path='/products/add' element ={<InputProduct />}/>
         <Route path='/products/:id' element ={<ProductDetails />}/>
-        <Route path='/products' element ={<ProductList />}/>
         <Route path='/products/edit' element ={<EditSaveProduct />} />
 
         <Route path='/profile' element={ <PrivateRoute restricted={true} page={<ProfilePage />} /> }/>

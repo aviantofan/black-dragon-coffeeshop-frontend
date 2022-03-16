@@ -18,8 +18,12 @@
   text-decoration: none;
   font-size: 20px;
 }
-.product-list .category:hover,
+/* .product-list .category:hover,
 .product-list .category:focus {
+  color: #81c68b !important;
+  border-bottom: 4px solid #81c68b;
+} */
+.product-list .category.focus {
   color: #81c68b !important;
   border-bottom: 4px solid #81c68b;
 }

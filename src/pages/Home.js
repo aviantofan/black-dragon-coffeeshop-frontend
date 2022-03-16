@@ -20,10 +20,6 @@ const Home = () => {
   const navigate = useNavigate();
   const { auth } = useSelector(state => state);
 
-  useEffect(() => {
-    console.log(auth);
-  }, []);
-
   return (
     <Layout>
     <header className="header-homepage home">
