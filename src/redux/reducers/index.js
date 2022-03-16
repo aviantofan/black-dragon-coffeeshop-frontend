@@ -9,6 +9,7 @@ import addCharts from './addCharts';
 import paymentCharts from './paymentCharts';
 import addHistory from './addHistory';
 import addProductHistory from './addProductHistory';
+import productCategories from './productCategories';
 
 const rootReducer = combineReducers({
   auth,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   addCharts,
   paymentCharts,
   addHistory,
-  addProductHistory
+  addProductHistory,
+  productCategories
 });
 
 export default rootReducer;

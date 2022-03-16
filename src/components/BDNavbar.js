@@ -22,7 +22,6 @@ export default function BDNavbar () {
     } else {
       setIsLogin(false);
     }
-    console.log('isLogin', isLogin);
   }, [auth.results]);
 
   useEffect(() => {

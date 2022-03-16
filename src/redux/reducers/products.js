@@ -45,6 +45,15 @@ export const productList = (state = productsState, action) => {
       state.isLoading = false;
       return { ...state };
     }
+
+    case 'CLEAR_PRODUCT_LIST': {
+      state.isLoading = false;
+      state.isError = false;
+      state.results = [];
+      state.pageInfo = {};
+      return { ...state };
+    }
+
     default: {
       return { ...state };
     }
